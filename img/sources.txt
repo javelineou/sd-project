@@ -1,0 +1,5 @@
+ballot.png
+https://www.electionguard.vote/images/electionguard-logo.png
+
+check.png
+https://www.nicepng.com/png/detail/415-4156612_checkmark-check-mark.png
