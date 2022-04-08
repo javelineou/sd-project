@@ -1,11 +1,10 @@
 <?php
-  if(count($_POST)>0){
-    if(empty($_POST['g-recaptcha-response'])){
-      echo '<script language="javascript">';
-      echo 'alert("Please solve reCaptcha!")';
-      echo '</script>';
-    }
-  }
+session_start();
+// Check if the user is already logged in, if yes then redirect him to logged in homepage
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  header("location: logged-homepage.php");
+  exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +44,7 @@
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="href="homepage.html"">
+        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html">
           <img
             src="img/fcuc-sc.png"
             width="50"
@@ -76,7 +75,7 @@
               <a class="nav-link" href="about-us.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact-us.html">Contact Us</a>
+              <a class="nav-link" href="contact-us.php">Contact Us</a>
             </li>
           </ul>
           <!-- Button on Navbar -->
@@ -117,14 +116,15 @@
                 width: 26rem;
               "
             >
-              <form class="card-body p-5 text-center" action="login-btn.php" method="POST">
+              <form class="card-body p-5 text-center" action="login-action.php" method="POST">
                 <h3 class="mb-5">Login</h3>
 				
-				<h6>Student ID</h6>
+				        <h6>Student ID</h6>
                 <div class="form-outline mb-3">
                   <input
                     type="text"
                     id="studentId"
+                    name="studentId"
                     class="form-control"
                     placeholder="Student ID"
                     required
@@ -132,11 +132,12 @@
                   <label class="form-label" for="studentId"></label>
                 </div>
 				
-				<h6>Password</h6>
+				        <h6>Password</h6>
                 <div class="form-outline mb-3">
                   <input
                     type="password"
                     id="password"
+                    name="password"
                     class="form-control"
                     placeholder="Password"
                     required

@@ -1,7 +1,17 @@
+<?php 
+session_start();
+ 
+// Check if the user is logged in, otherwise redirect to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Contact Us</title>
+    <?php echo "<title>Welcome, " . $_SESSION['student_id'] . "</title>"; ?>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
@@ -63,7 +73,7 @@
               <a class="nav-link" href="about-us.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact-us.html">Contact Us</a>
+              <a class="nav-link" href="contact-us.php">Contact Us</a>
             </li>
           </ul>
           <!-- Button on Navbar -->
@@ -77,9 +87,9 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="login.php"
+            href="logout.php"
           >
-            Login
+            Logout
           </a>
         </div>
         <!-- Collapsible wrapper -->
@@ -90,80 +100,57 @@
 
   <!-- Body -->
   <body>
-    <div class="row mt-5">
-      <!-- Left Column -->
-      <div class="col-md ms-5">
-        <h1 class="section-title pb-3">Contact Us</h1>
-        <p class="pb-4 w-50" style="font-size: 18px">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-          optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi
-          voluptate quas.
-        </p>
-        <div class="mb-4">
-          <i class="bi bi-telephone-fill" style="font-size: 20px">
-            <span class="ms-3">+60 (017) 1312312</span></i
-          >
-        </div>
-        <div class="col-8 mb-4">
-          <i class="bi bi-geo-alt-fill w-25" style="font-size: 20px">
-            <span class="ms-3">First City University College</span></i
-          >
-        </div>
-        <div class="mb-4">
-          <i class="bi bi-envelope-fill" style="font-size: 20px">
-            <span class="ms-3">enquiry@firstcity.edu.my</span></i
-          >
-        </div>
+    <div class="slidecenter">
+      <img
+        class="voteimageslide"
+        src="img/voterightimage1.jpg"
+        alt="Vote Right Image 1"
+      />
+      <img
+        class="voteimageslide"
+        src="img/voterightimage2.png"
+        alt="Vote Right Image 2"
+      />
+      <img
+        class="voteimageslide"
+        src="img/voterightimage3.jpg"
+        alt="Vote Right Image 3"
+      />
+    </div>
+
+    <p><br /><br /></p>
+
+    <div class="grid-container1">
+      <div class="whyvote">
+        <h4>Why Vote?</h4>
       </div>
-      <!-- Right Column -->
-      <div class="col-md ms-5">
-        <input
-          type="text"
-          id="name"
-          class="form-control w-75"
-          placeholder="Name"
-          required
-        />
-        <label></label>
-        <input
-          type="email"
-          id="email"
-          class="form-control w-75"
-          placeholder="Email"
-          required
-        />
-        <label></label>
-        <textarea
-          class="form-control w-75 mb-4"
-          id="enquiries"
-          rows="5"
-          placeholder="Leave your message..."
-          required
-        ></textarea>
-        <section>CAPTCHA</section>
-        <button class="btn btn-primary shadow-sm my-4" type="submit">
-          Submit
-        </button>
+      <div class="whyvotedetail">
+        <p>
+          The law does not require citizens to vote, but voting is a very
+          important part of any democracy. By voting, citizens are participating
+          in the democratic process. Citizens vote for leaders to represent them
+          and their ideas, and the leaders support the citizens' interests.
+        </p>
+      </div>
+      <div class="votehere">
+        <h4>Why Choose the Right Candidate?</h4>
+      </div>
+      <div class="voteheredetail">
+        <p>
+          Choose the right candidate to fight for your rights as students. Your
+          future representative will be the one to fight for your rights in the
+          university hence be a part of the process in selecting the right
+          leader to lead and fight for your rights.
+        </p>
       </div>
     </div>
+    <p><br /><br /></p>
   </body>
 
   <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <h5 class="text-uppercase text-center">About Developers</h5>
-      <!-- Section Text -->
-      <section class="mb-auto text-center">
-        <p>
-         The four developers of this website are; Saravanaaguru, Piravindraj, Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020 Semester. The developers developed this secure voting website for the Software Development Project that is currently being held at First City University College in the February 2022 semester. 
-        </p>
-      </section>
-    </div>
-
+  <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->
-    <section class="mb-2 text-center">
+    <section class="mt-4 text-center">
       <a
         class="btn btn-outline-dark btn-floating m-1"
         href="https://www.facebook.com/firstcityUC/"
@@ -185,11 +172,31 @@
     </section>
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center p-3">
       ©2022 Copyright
       <a class="text-dark" href="https://firstcity.edu.my/"
         >First City University College</a
       >
     </div>
   </footer>
+
+  <script>
+    /*Automatic Slide*/
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("voteimageslide");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1;
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 5000); // Change image every 5 seconds
+    }
+  </script>
 </html>

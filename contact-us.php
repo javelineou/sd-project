@@ -1,7 +1,17 @@
+<?php
+  if(count($_POST)>0){
+    if(empty($_POST['g-recaptcha-response'])){
+      echo '<script language="javascript">';
+      echo 'alert("Please solve reCaptcha!")';
+      echo '</script>';
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login</title>
+    <title>Contact Us</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
@@ -23,6 +33,9 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- reCaptcha script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <!-- Header -->
@@ -32,7 +45,7 @@
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="href="homepage.html"">
+        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html">
           <img
             src="img/fcuc-sc.png"
             width="50"
@@ -70,17 +83,17 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="vote.html"
+            href="#"
           >
             Vote
-        </a>
+          </a>
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="login.php"
           >
             Login
-      </a>
+          </a>
         </div>
         <!-- Collapsible wrapper -->
       </div>
@@ -90,58 +103,68 @@
 
   <!-- Body -->
   <body>
-    <section class="vh-10" style="background-color: #e1f3f0">
-      <div class="container py-3 h-10">
-        <br>
-		<h1 style="text-align:center;">Welcome to First City University College Voting System</h1><br><br>
-		<div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div
-              class="card mx-auto shadow"
-              style="
-                border-radius: 1rem;
-                background-color: #fafafa;
-                width: 26rem;
-              "
-            >
-              <form class="card-body p-5 text-center" action="admin-login-btn.php" method="get">
-                <h3 class="mb-5">Login</h3>
-				
-				<h6>Student ID</h6>
-                <div class="form-outline mb-3">
-                  <input
-                    type="text"
-                    id="studentId"
-                    class="form-control"
-                    placeholder="Student ID"
-                    required
-                  />
-                  <label class="form-label" for="studentId"></label>
-                </div>
-				
-				<h6>Password</h6>
-                <div class="form-outline mb-3">
-                  <input
-                    type="password"
-                    id="password"
-                    class="form-control"
-                    placeholder="Password"
-                    required
-                  />
-                  <label class="form-label" for="password"></label>
-                </div>
-                <section>Captcha</section>
-
-                <hr class="my-4" />
-
-                <input name="login-btn" class="btn btn-primary shadow-sm" type="submit" value="Login">
-                
-              </form>
-            </div>
-          </div>
+    <div class="row mt-5">
+      <!-- Left Column -->
+      <div class="col-md ms-5">
+        <h1 class="section-title pb-3">Contact Us</h1>
+        <p class="pb-4 w-50" style="font-size: 18px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+          distinctio earum repellat quaerat voluptatibus placeat nam, commodi
+          optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi
+          voluptate quas.
+        </p>
+        <div class="mb-4">
+          <i class="bi bi-telephone-fill" style="font-size: 20px">
+            <span class="ms-3">+60 (017) 1312312</span></i
+          >
+        </div>
+        <div class="col-8 mb-4">
+          <i class="bi bi-geo-alt-fill w-25" style="font-size: 20px">
+            <span class="ms-3">First City University College</span></i
+          >
+        </div>
+        <div class="mb-4">
+          <i class="bi bi-envelope-fill" style="font-size: 20px">
+            <span class="ms-3">enquiry@firstcity.edu.my</span></i
+          >
         </div>
       </div>
-    </section>
+      <!-- Right Column -->
+      <div class="col-md ms-5">
+        <form action="" method="POST">
+        <input
+          type="text"
+          id="name"
+          class="form-control w-75"
+          placeholder="Name"
+          required
+        />
+        <label></label>
+        <input
+          type="email"
+          id="email"
+          class="form-control w-75"
+          placeholder="Email"
+          required
+        />
+        <label></label>
+        <textarea
+          class="form-control w-75 mb-4"
+          id="enquiries"
+          rows="5"
+          placeholder="Leave your message..."
+          required
+        ></textarea>
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LdXpz4fAAAAAAfubqQ6XHcHDOQdNSrRvrpmkR56"
+        ></div>
+        <button class="btn btn-primary shadow-sm my-4" type="submit">
+          Submit
+        </button>
+        </form>
+      </div>
+    </div>
   </body>
 
   <!-- Footer -->
@@ -152,13 +175,11 @@
       <!-- Section Text -->
       <section class="mb-auto text-center">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-          optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi
-          voluptate quas.Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam,
-          commodi optio pariatur est quia magnam eum harum corrupti dicta,
-          aliquam sequi voluptate quas.
+          The four developers of this website are; Saravanaaguru, Piravindraj,
+          Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020
+          Semester. The developers developed this secure voting website for the
+          Software Development Project that is currently being held at First
+          City University College in the February 2022 semester.
         </p>
       </section>
     </div>
