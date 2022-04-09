@@ -1,8 +1,8 @@
 <?php
 	include("../connection.php");
 	
-	$Sid = $_GET['Sid'];
-	$query = "DELETE FROM student WHERE Sid= '$Sid'";
+	$student_id = $_GET['student_id'];
+	$query = "DELETE FROM student WHERE student_id= '$student_id'";
 	$data  = mysqli_query($conn, $query);
 	
 	if($data)

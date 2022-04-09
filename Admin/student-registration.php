@@ -107,17 +107,17 @@
 			
 				<div class="input_field">
 					<label>  Name </label>
-					<input type="text" class="input" name="Sname" required>
+					<input type="text" class="input" name="name" required>
 				</div>
 				
 				<div class="input_field">
 					<label> Student ID </label>
-					<input type="text" class="input" name="Sid" required>
+					<input type="text" class="input" name="student_id" required>
 				</div>
 				
 				<div class="input_field">
 					<label> password </label>
-					<input type="password" class="input" name="Spass" required>
+					<input type="password" class="input" name="password" required>
 				</div>
 				
 				<div class="input_field">
@@ -133,7 +133,7 @@
 				
 				<div class="input_field">
 					<label> Faculty </label>
-					<select class="selectbox" name="Sfaculty" required>
+					<select class="selectbox" name="faculty" required>
 						<option value=""> - Select - </option>
 						<option value="Faculty of Engineering and Computing"> Faculty of Engineering and Computing</option>
 						<option value="Faculty of Arts"> Faculty of Arts</option>
@@ -143,7 +143,7 @@
 				
 				<div class="input_field">
 					<label> Year </label>
-					<select class="selectbox" name="Syear" required>
+					<select class="selectbox" name="year" required>
 						<option value=""> - Select - </option>
 						<option value="1"> 1 </option>
 						<option value="2"> 2 </option>
@@ -215,17 +215,17 @@
 	
 	if(isset($_POST['submit']))
 	{
-		$Sname 				= $_POST['Sname'];
-		$Sid 				= $_POST['Sid'];
-		$Spass 				= $_POST['Spass'];
+		$name 				= $_POST['name'];
+		$student_id 		= $_POST['student_id'];
+		$password 			= $_POST['password'];
 		$level_of_study 	= $_POST['level_of_study'];
-		$Sfaculty 			= $_POST['Sfaculty'];
-		$Syear 				= $_POST['Syear'];
+		$faculty 			= $_POST['faculty'];
+		$year 				= $_POST['year'];
 		$status				= $_POST['status'];
 		$vote_status		= $_POST['vote_status'];
 	
 	
-		$query = "INSERT INTO student VALUES('$Sname', '$Sid', '$Sfaculty', '$Syear', '$Spass', '$level_of_study', '$status', '$vote_status')";
+		$query = "INSERT INTO student VALUES('$name', '$student_id', '$faculty', '$year', '$password', '$level_of_study', '$status', '$vote_status')";
 		
 		$data = mysqli_query($conn, $query );
 		

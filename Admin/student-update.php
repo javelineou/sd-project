@@ -1,8 +1,8 @@
 <?php
 	include("../connection.php");
 	
-	$Sid = $_GET['Sid'];
-	$query = "SELECT * FROM student where Sid= '$Sid'";
+	$student_id = $_GET['student_id'];
+	$query = "SELECT * FROM student where student_id= '$student_id'";
 	$data  = mysqli_query($conn, $query);
 	$result = mysqli_fetch_assoc($data);
 ?>
@@ -33,17 +33,17 @@
 			
 				<div class="input_field">
 					<label>  Name </label>
-					<input type="text" value="<?php echo $result['Sname'];?>" class="input" name="Sname" required>
+					<input type="text" value="<?php echo $result['name'];?>" class="input" name="name" required>
 				</div>
 				
 				<div class="input_field">
 					<label> Student ID </label>
-					<input type="text" value="<?php echo $result['Sid'];?>" class="input" name="Sid" required>
+					<input type="text" value="<?php echo $result['student_id'];?>" class="input" name="student_id" required>
 				</div>
 				
 				<div class="input_field">
 					<label> password </label>
-					<input type="text" value="<?php echo $result['Spass'];?>" class="input" name="Spass" required>
+					<input type="text" value="<?php echo $result['password'];?>" class="input" name="password" required>
 				</div>
 				
 				<div class="input_field">
@@ -90,11 +90,11 @@
 				
 				<div class="input_field">
 					<label> Faculty </label>
-					<select class="selectbox" name="Sfaculty" required>
+					<select class="selectbox" name="faculty" required>
 						<option value=""> - Select - </option>
 						<option value="Faculty of Engineering and Computing"
 						<?php
-							if($result['Sfaculty'] == 'Faculty of Engineering and Computing')
+							if($result['faculty'] == 'Faculty of Engineering and Computing')
 							{
 								echo "selected";
 							}
@@ -102,7 +102,7 @@
 						> Faculty of Engineering and Computing</option>
 						<option value="Faculty of Arts"
 						<?php
-							if($result['Sfaculty'] == 'Faculty of Arts')
+							if($result['faculty'] == 'Faculty of Arts')
 							{
 								echo "selected";
 							}
@@ -110,7 +110,7 @@
 						> Faculty of Arts</option>
 						<option value="Faculty of Business"
 						<?php
-							if($result['Sfaculty'] == 'Faculty of Business')
+							if($result['faculty'] == 'Faculty of Business')
 							{
 								echo "selected";
 							}
@@ -121,11 +121,11 @@
 				
 				<div class="input_field">
 					<label> Year </label>
-					<select class="selectbox" name="Syear" required>
+					<select class="selectbox" name="year" required>
 						<option value=""> - Select - </option>
 						<option value="1"
 						<?php
-							if($result['Syear'] == '1')
+							if($result['year'] == '1')
 							{
 								echo "selected";
 							}
@@ -133,7 +133,7 @@
 						> 1 </option>
 						<option value="2"
 						<?php
-							if($result['Syear'] == '2')
+							if($result['year'] == '2')
 							{
 								echo "selected";
 							}
@@ -141,7 +141,7 @@
 						> 2 </option>
 						<option value="3"
 						<?php
-							if($result['Syear'] == '3')
+							if($result['year'] == '3')
 							{
 								echo "selected";
 							}
@@ -179,17 +179,17 @@
 	
 	if(isset($_POST['update']))
 	{
-		$Sname 				= $_POST['Sname'];
-		$Sid 				= $_POST['Sid'];
-		$Spass 				= $_POST['Spass'];
+		$name 				= $_POST['name'];
+		$student_id 		= $_POST['student_id'];
+		$password 				= $_POST['password'];
 		$level_of_study 	= $_POST['level_of_study'];
-		$Sfaculty 			= $_POST['Sfaculty'];
-		$Syear 				= $_POST['Syear'];
+		$faculty 			= $_POST['faculty'];
+		$year 				= $_POST['year'];
 		$status				= $_POST['status'];
 		$vote_status		= $_POST['vote_status'];
 	
 	
-		$query = "UPDATE student set Sname='$Sname', Sid='$Sid', Spass='$Spass', level_of_study='$level_of_study', Sfaculty='$Sfaculty', Syear='$Syear', status='$status', vote_status='$vote_status' WHERE Sid='$Sid' ";
+		$query = "UPDATE student set name='$name', student_id='$student_id', password='$password', level_of_study='$level_of_study', faculty='$faculty', year='$year', status='$status', vote_status='$vote_status' WHERE student_id='$student_id' ";
 		
 		$data = mysqli_query($conn, $query );
 		
