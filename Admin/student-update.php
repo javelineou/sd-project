@@ -1,5 +1,5 @@
 <?php
-	include("../connection.php");
+	include("../config.php");
 	
 	$student_id = $_GET['student_id'];
 	$query = "SELECT * FROM student where student_id= '$student_id'";

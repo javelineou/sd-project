@@ -1,5 +1,5 @@
 <?php
-	include("../connection.php");
+	include("../config.php");
 	
 	$student_id = $_GET['student_id'];
 	$query = "DELETE FROM student WHERE student_id= '$student_id'";
