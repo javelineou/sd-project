@@ -114,7 +114,7 @@ if(isset($_POST['submit_contact'])){
               <a class="nav-link" href="about-us.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact-us.html">Contact Us</a>
+              <a class="nav-link" href="contact-us.php">Contact Us</a>
             </li>
           </ul>
           <!-- Button on Navbar -->
@@ -146,10 +146,7 @@ if(isset($_POST['submit_contact'])){
       <div class="col-md ms-5">
         <h1 class="section-title pb-3">Contact Us</h1>
         <p class="pb-4 w-50" style="font-size: 18px">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-          optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi
-          voluptate quas.
+          Your satisfaction is our main priority. In prior to that, hit us up anytime between 9am - 5pm on the weekdays as well as weekends. We will be happy to entertain you with our sweet voice
         </p>
         <div class="mb-4">
           <i class="bi bi-telephone-fill" style="font-size: 20px">
@@ -178,6 +175,7 @@ if(isset($_POST['submit_contact'])){
           placeholder="Name"
           required
         />
+		<br />
         <label></label>
         <input
           type="email"
@@ -187,6 +185,7 @@ if(isset($_POST['submit_contact'])){
           placeholder="Email"
           required
         />
+		<br />
         <label></label>
         <textarea
           class="form-control w-75 mb-4"
