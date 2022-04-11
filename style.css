@@ -356,26 +356,6 @@ body {
 	flex-wrap: wrap;
 }
 
-.team-section88 .section-title88{
-	flex-basis: 100%;
-	max-width: 100%;
-	margin-bottom: 70px;
-}
-
-.team-section88 .section-title88 h1{
-	font-size: 40px;
-	text-align: center;
-	margin:0;
-	color: black;
-	font-weight: 700;
-}
-
-.team-section88 .section-title88 p{
-	font-size:16px;
-	text-align: center;
-	margin:15px 0 0;
-	color:black;
-}
 .team-section88 .team-items88{
 	
 	flex-basis: 100%;
@@ -394,6 +374,7 @@ body {
 	display: block;
 	width: 100%;
 	border-radius: 8px;
+	height: 450px;
 }
 
 .team-section88 .team-items88 .item88 .inner88{
