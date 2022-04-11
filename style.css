@@ -335,4 +335,133 @@ body {
   height: auto;
 }
 
+/*About Us Page*/
+.team-section88{	
+	min-height: 100vh;
+	padding:70px 15px 30px;
+	background:url(pictures/fortnite2.jpg);
+	background-repeat: no-repeat;
 
+
+	background-size:cover;
+}
+
+.container88{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row88{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.team-section88 .section-title88{
+	flex-basis: 100%;
+	max-width: 100%;
+	margin-bottom: 70px;
+}
+
+.team-section88 .section-title88 h1{
+	font-size: 40px;
+	text-align: center;
+	margin:0;
+	color: black;
+	font-weight: 700;
+}
+
+.team-section88 .section-title88 p{
+	font-size:16px;
+	text-align: center;
+	margin:15px 0 0;
+	color:black;
+}
+.team-section88 .team-items88{
+	
+	flex-basis: 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.team-section88 .team-items88 .item88{
+ flex-basis: calc(25% - 30px);
+ max-width: calc(25% - 30px);
+ transition: all .5s ease;
+ margin-bottom: 40px;
+}
+.team-section88 .team-items88 .item88 img{
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.team-section88 .team-items88 .item88 .inner88{
+	position: relative;
+	z-index: 11;
+	padding:0 15px;
+}
+.team-section88 .team-items88 .item88 .inner88 .info88{
+	background-color:#009688;
+	text-align: center;
+	padding: 20px 15px;
+	border-radius:8px;
+	transition: all .5s ease;
+	margin-top: -40px;
+}
+.team-section88 .team-items88 .item88:hover  .info88{
+    transform: translateY(-20px);
+}
+.team-section88 .team-items88 .item88:hover{
+ transform: translateY(-10px);	
+}
+.team-section88 .team-items88 .item88 .inner88 .info88 h5{
+	margin:0;
+	font-size: 18px;
+	font-weight: 600;
+	color:#ffffff;
+}
+.team-section88 .team-items88 .item88 .inner88 .info88 p{
+	font-size: 16px;
+	font-weight: 400;
+	color:#c5c5c5;
+	margin:10px 0 0;
+}
+
+.team-section88 .team-items88 .item88 .inner88 .info88 .social-links88{
+	padding-top: 15px;
+}
+
+.team-section88 .team-items88 .item88 .inner88 .info88 .social-links88 a{
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-color: #ffffff;
+	color:#009688;
+	border-radius: 50%;
+	margin:0 2px;
+	text-align: center;
+	line-height: 32px;
+	font-size:16px;
+	transition: all .5s ease;
+}
+
+.team-section88 .team-items88 .item88 .inner88 .info88 .social-links88 a:hover{
+	box-shadow: 0 0 10px #000;
+}
+
+@media(max-width: 991px){
+	.team-section88 .team-items88 .item88{
+      flex-basis: calc(50% - 30px);
+       max-width: calc(50% - 30px);
+
+   }
+}
+
+@media(max-width: 767px){
+	.team-section .team-items .item{
+      flex-basis: calc(100%);
+       max-width: calc(100%);
+
+   }
+}
