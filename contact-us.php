@@ -8,6 +8,44 @@
   }
 ?>
 
+<script>
+function confirmation(){
+var answer = confirm('Are you confirm to submit?');
+if(answer){
+form.submit();
+}
+else{
+alert("Submit insuccessful")
+}
+}
+</script>
+
+<?php
+// Include config file to start db
+include ("config.php");
+
+//Get ID from Database
+if(isset($_POST['submit_contact'])){
+    $name=$_POST['Name'];
+	$email=$_POST['Email'];
+	$enquiries=$_POST['Enquiries'];
+    
+	if (empty($name)||empty ($email)||empty ($enquiries))
+	{
+		echo "opps! can't leave any field blank";
+	}
+	else
+	{
+		$sql="INSERT INTO contact(name, email, enquiries) VALUE ('$name', '$email', '$enquiries')";
+		if (mysqli_query($conn, $sql)) {
+        echo "Record updated successfully". $sql;
+        //go to thank you page
+		echo ("<script LANGUAGE='JavaScript'>window.location.href='thankyou.html';</script>");
+		} else { echo "Error deleting record: ".mysqli_error($conn); }
+	}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -115,7 +153,7 @@
         </p>
         <div class="mb-4">
           <i class="bi bi-telephone-fill" style="font-size: 20px">
-            <span class="ms-3">+60 (017) 1312312</span></i
+            <span class="ms-3">+60 (17) 1312312</span></i
           >
         </div>
         <div class="col-8 mb-4">
@@ -131,10 +169,11 @@
       </div>
       <!-- Right Column -->
       <div class="col-md ms-5">
-        <form action="" method="POST">
+        <form action="contact-us.php" method="POST">
         <input
           type="text"
-          id="name"
+          id="Name"
+		  name="Name"
           class="form-control w-75"
           placeholder="Name"
           required
@@ -142,7 +181,8 @@
         <label></label>
         <input
           type="email"
-          id="email"
+          id="Email"
+		  name="Email"
           class="form-control w-75"
           placeholder="Email"
           required
@@ -150,18 +190,18 @@
         <label></label>
         <textarea
           class="form-control w-75 mb-4"
-          id="enquiries"
+          id="Enquiries"
+		  name="Enquiries"
           rows="5"
           placeholder="Leave your message..."
           required
         ></textarea>
         <div
           class="g-recaptcha"
-          data-sitekey="6LdXpz4fAAAAAAfubqQ6XHcHDOQdNSrRvrpmkR56"
-        ></div>
-        <button class="btn btn-primary shadow-sm my-4" type="submit">
-          Submit
-        </button>
+          data-sitekey="6LdXpz4fAAAAAAfubqQ6XHcHDOQdNSrRvrpmkR56">
+		</div>
+        <input class="btn btn-primary shadow-sm my-4" type="submit" name="submit_contact" onClick="confirmation();" value="Submit">
+        
         </form>
       </div>
     </div>
