@@ -1,7 +1,7 @@
 <?php 
 session_start();
  
-// Check if user is logged in and is not admin, it'll redirect to logged homepage
+// Check if user is not admin, it'll redirect to logged homepage
 if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] !== '1'){
   header("location: logged-homepage.php");
   exit;
@@ -65,6 +65,13 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] !== '1'){
         <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Button on Navbar -->
+          <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            onclick="history.back()"
+          >
+            Back
+          </a>
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"

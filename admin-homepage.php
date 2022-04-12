@@ -7,8 +7,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
     exit;
 }
 
-if($_SESSION["admin_status"] !== '1'){
+// Check if the user is logged in as student, it'll go to student homepage
+if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] !== '1'){
   header("location: logged-homepage.php");
+  exit;
 }
 ?>
 
