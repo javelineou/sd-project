@@ -44,7 +44,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html">
+        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
           <img
             src="img/fcuc-sc.png"
             width="50"
@@ -69,7 +69,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="homepage.html">Home</a>
+              <a class="nav-link" href="homepage.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">About Us</a>

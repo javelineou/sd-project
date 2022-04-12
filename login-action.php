@@ -26,14 +26,21 @@
 
         //Validate credentials
              // Prepare a select statement
-             $sql = "SELECT * from student where student_id='$studentId' and password='$password'";
+             $sql = "SELECT student_id, admin_status from student where student_id='$studentId' and password='$password'";
 
              $result = $conn->query($sql);
              if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
                 $_SESSION['student_id'] = $row['student_id'];
                 $_SESSION["loggedin"] = true;
-                header("Location: logged-homepage.php");
+                $_SESSION["admin_status"] = $row['admin_status'];
+
+                if($_SESSION["admin_status"] == '1'){
+                    header("Location: admin-homepage.php");
+                }
+                else{
+                    header("Location: logged-homepage.php");
+                }
              }
              else{
                 ?>

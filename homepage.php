@@ -1,3 +1,18 @@
+<?php 
+session_start();
+ 
+// Check if the user is logged in as admin, it'll go to admin homepage
+if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
+  header("location: admin-homepage.php");
+  exit;
+}
+// Check if the user is logged in, it'll go to logged homepage
+else if($_SESSION["loggedin"] == true){
+  header("location: logged-homepage.php");
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,7 +47,7 @@
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html">
+        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
           <img
             src="img/fcuc-sc.png"
             width="50"
@@ -57,7 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="homepage.html">Home</a>
+              <a class="nav-link" href="homepage.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">About Us</a>

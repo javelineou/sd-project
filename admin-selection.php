@@ -1,7 +1,17 @@
+<?php 
+session_start();
+ 
+// Check if user is logged in and is not admin, it'll redirect to logged homepage
+if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] !== '1'){
+  header("location: logged-homepage.php");
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SELECT USER</title>
+    <title>Admin Panel</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
@@ -31,7 +41,7 @@
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html">
+        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
           <img
             src="img/fcuc-sc.png"
             width="50"
@@ -55,14 +65,13 @@
         <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Button on Navbar -->
-          <a href="#"
-            ><button
-              type="button"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            >
-              Logout
-            </button></a
+          <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="logout.php"
           >
+            Logout
+          </a>
         </div>
         <!-- Collapsible wrapper -->
       </div>

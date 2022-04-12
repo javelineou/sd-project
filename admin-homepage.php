@@ -2,9 +2,13 @@
 session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
     header("location: login.php");
     exit;
+}
+
+if($_SESSION["admin_status"] !== '1'){
+  header("location: logged-homepage.php");
 }
 ?>
 
@@ -42,7 +46,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html">
+        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
           <img
             src="img/fcuc-sc.png"
             width="50"
@@ -67,7 +71,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="homepage.html">Home</a>
+              <a class="nav-link" href="homepage.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">About Us</a>
@@ -76,7 +80,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <a class="nav-link" href="contact-us.php">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="admin-selection.html">Admin Panel</a>
+              <a class="nav-link" href="admin-selection.php">Admin Panel</a>
             </li>
           </ul>
           <!-- Button on Navbar -->
