@@ -22,6 +22,7 @@
     // Processing form data when form is submitted
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $studentId = $_POST["studentId"];
+        //$studentId = $mysqli -> real_escape_string($_POST['studentId']);
         $password = md5($_POST["password"]); //Password input converted into md5
 
         //Validate credentials
