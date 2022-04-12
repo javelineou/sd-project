@@ -1,6 +1,12 @@
 <?php 
 session_start();
  
+// Check if the user is logged in, otherwise redirect to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
+  header("location: login.php");
+  exit;
+}
+
 // Check if user is not admin, it'll redirect to logged homepage
 if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] !== '1'){
   header("location: logged-homepage.php");

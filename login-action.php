@@ -29,6 +29,8 @@
              $sql = "SELECT student_id, admin_status from student where student_id='$studentId' and password='$password'";
 
              $result = $conn->query($sql);
+
+
              if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
                 $_SESSION['student_id'] = $row['student_id'];
