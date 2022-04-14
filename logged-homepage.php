@@ -9,8 +9,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 // Check if the user is logged in as admin, it'll go to admin homepage
 if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
-  header("location: admin-homepage.php");
-  exit;
+    header("location: admin-homepage.php");
+    exit;
 }
 ?>
 

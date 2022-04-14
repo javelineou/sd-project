@@ -7,7 +7,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["
   exit;
 }
 // Check if the user is already logged in as student, then go to admin homepage
-else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSION["admin_status"] !== '1'){
+else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
   header("location: logged-homepage.php");
   exit;
 }
