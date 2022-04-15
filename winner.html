@@ -1,19 +1,7 @@
-<?php 
-  session_start();
-  
-  // Check if the user is logged in, otherwise redirect to login page
-  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-      header("location: login.php");
-      exit;
-  }
-
-  //header('Refresh: 10; URL=logged-homepage.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Thank You!</title>
+    <title>Election Result</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
@@ -86,7 +74,6 @@
           >
             Vote
           </a>
-          <!-- This one should be logout as thankyou page can be seen after voting -->
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"

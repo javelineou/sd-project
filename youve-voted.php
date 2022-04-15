@@ -1,3 +1,15 @@
+<?php 
+  session_start();
+  
+  // Check if the user is logged in, otherwise redirect to login page
+  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+      header("location: login.php");
+      exit;
+  }
+
+  //header('Refresh: 10; URL=logged-homepage.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -78,7 +90,7 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="login.php"
           >
             Login
           </a>
@@ -100,10 +112,6 @@
         height="300"
         alt="Check Symbol"
       />
-      <p class="lead">
-        <strong>Lorem ipsum dolor sit</strong> amet consectetur adipisicing
-        elit.
-      </p>
       <p>Having trouble? <a href="#">Contact us</a></p>
     </div>
   </body>
@@ -116,13 +124,11 @@
       <!-- Section Text -->
       <section class="mb-auto text-center">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-          optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi
-          voluptate quas.Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam,
-          commodi optio pariatur est quia magnam eum harum corrupti dicta,
-          aliquam sequi voluptate quas.
+          The four developers of this website are; Saravanaaguru, Piravindraj,
+          Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020
+          Semester. The developers developed this secure voting website for the
+          Software Development Project that is currently being held at First
+          City University College in the February 2022 semester.
         </p>
       </section>
     </div>
