@@ -1,5 +1,14 @@
 <?php
 	include("../config.php");
+
+	// Starting session
+	// session_start();
+
+	// Check if user is whether or not an admin
+	// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+	// header("location: ../logged-homepage.php");
+	// exit;
+	// }
 ?>
 
 
@@ -23,8 +32,13 @@
 		  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		  crossorigin="anonymous"
 		></script>
+		<!-- Bootstrap Icon Lib-->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+		/>
 		<link rel="stylesheet" type="text/css" href="../registrations1.css" >
-		<title> Add student </title>   
+		<title> Student Registration </title>   
 	</head>
 	
 	    <!-- Header -->
@@ -98,13 +112,10 @@
 	<body>
 		<div class="container"> 
 		<form action="#" method="POST" >
-			<div class="title"> 
-			
+			<div class="title">
 				Registration Form
-				
 			</div>
-			<div class="form"> 
-			
+			<div class="form">
 				<div class="input_field">
 					<label>  Name </label>
 					<input type="text" class="input" name="name" required>
@@ -116,7 +127,7 @@
 				</div>
 				
 				<div class="input_field">
-					<label> password </label>
+					<label> Password </label>
 					<input type="password" class="input" name="password" required>
 				</div>
 				
@@ -166,11 +177,8 @@
 				<div class="input_field">
 					<input type="submit" value="Register" class="btn" name="submit">
 				</div>
-				
-				
 			</div>
 		</form>	
-
 		</div>	
 	</body>
 	

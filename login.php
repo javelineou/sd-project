@@ -112,7 +112,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
       <div class="container py-3 h-10">
         <br>
 		<h1 style="text-align:center;">Welcome to First City University College Voting System</h1><br><br>
-		<div class="row d-flex justify-content-center align-items-center h-100">
+		  <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div
               class="card mx-auto shadow"
@@ -171,13 +171,11 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
       <!-- Section Text -->
       <section class="mb-auto text-center">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-          optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi
-          voluptate quas.Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam,
-          commodi optio pariatur est quia magnam eum harum corrupti dicta,
-          aliquam sequi voluptate quas.
+          The four developers of this website are; Saravanaaguru, Piravindraj,
+          Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020
+          Semester. The developers developed this secure voting website for the
+          Software Development Project that is currently being held at First
+          City University College in the February 2022 semester.
         </p>
       </section>
     </div>

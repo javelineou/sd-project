@@ -1,3 +1,15 @@
+<?php
+
+	// Starting session
+	// session_start();
+
+	// Check if user is whether or not an admin
+	// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+	// header("location: ../logged-homepage.php");
+	// exit;
+	// }
+?>
+
 <html>
 	<head>
 		

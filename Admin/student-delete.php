@@ -1,5 +1,14 @@
 <?php
 	include("../config.php");
+
+	// Starting session
+	// session_start();
+
+	// Check if user is whether or not an admin
+	// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+	// header("location: ../logged-homepage.php");
+	// exit;
+	// }
 	
 	$student_id = $_GET['student_id'];
 	$query = "DELETE FROM student WHERE student_id= '$student_id'";

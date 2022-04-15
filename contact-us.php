@@ -141,7 +141,7 @@ if(isset($_POST['submit_contact'])){
 
   <!-- Body -->
   <body>
-    <div class="row mt-5">
+    <div class="row mt-5 w-100" >
       <!-- Left Column -->
       <div class="col-md ms-5">
         <h1 class="section-title pb-3">Contact Us</h1>
