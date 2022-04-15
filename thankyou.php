@@ -1,3 +1,15 @@
+<?php 
+  session_start();
+  
+  // Check if the user is logged in, otherwise redirect to login page
+  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+      header("location: login.php");
+      exit;
+  }
+
+  //header('Refresh: 10; URL=logged-homepage.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -78,7 +90,7 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="login.php"
           >
             Login
           </a>
@@ -95,15 +107,11 @@
       <h1 class="display-2 fw-bold">Thank You!</h1>
       <img
         src="img/check.png"
-        class="img-fluid"
+        class="img-fluid mb-5"
         width="300"
         height="175"
         alt="Check Symbol"
       />
-      <p class="lead">
-        <strong>Lorem ipsum dolor sit</strong> amet consectetur adipisicing
-        elit.
-      </p>
       <p>Having trouble? <a href="contact-us.php">Contact us</a></p>
     </div>
   </body>
