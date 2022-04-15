@@ -1,7 +1,19 @@
+<?php 
+  session_start();
+  
+  // Check if the user is logged in, otherwise redirect to login page
+  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+      header("location: login.php");
+      exit;
+  }
+
+  //header('Refresh: 10; URL=logged-homepage.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Election Result</title>
+    <title>Thank You!</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
@@ -68,19 +80,20 @@
           </ul>
           <!-- Button on Navbar -->
           <a
-          type="button"
-          class="btn btn-outline-primary me-3 shadow-sm btn-width"
-          href="#"
-        >
-          Vote
-        </a>
-        <a
-          type="button"
-          class="btn btn-outline-primary me-3 shadow-sm btn-width"
-          href="login.php"
-        >
-          Login
-        </a>
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="#"
+          >
+            Vote
+          </a>
+          <!-- This one should be logout as thankyou page can be seen after voting -->
+          <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="login.php"
+          >
+            Login
+          </a>
         </div>
         <!-- Collapsible wrapper -->
       </div>
@@ -88,8 +101,8 @@
     </nav>
   </header>
 
-  <!-- Body -->
-  <body>
+<!-- Body -->
+<body style="background-color: #e1f3ff;">
     <div class="text-center mt-4">
       <h1 class="display-4 fw-bold">FCUC Student Council Election Result</h1>
       <img
@@ -101,8 +114,7 @@
       />
       <h1 class="display-6">Countdown</h1>
       <div id="countdown" class="countdown">
-        <div class="row justify-content-center my-5">
-
+        <div class="row justify-content-center mt-1 mb-5">
             <div class="col-1">
                 <h2 id="days"></h2>
                 <small>Days</small>
@@ -124,9 +136,34 @@
             </div>
         </div>
           <!-- Countdown script -->
-    <script src="js/countdown.js"></script>
+          <script>
+            const days = document.getElementById("days");
+            const hours = document.getElementById("hours");
+            const minutes = document.getElementById("minutes");
+            const seconds = document.getElementById("seconds");
+
+            const electionTime = new Date(`May 30 2022 00:00:00`);
+
+            // Update countdown time
+            function updateCountdown() {
+              const currentTime = new Date();
+              const diff = electionTime - currentTime;
+
+              const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+              const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+              const m = Math.floor(diff / 1000 / 60) % 60;
+              const s = Math.floor(diff / 1000) % 60;
+
+              days.innerHTML = d;
+              hours.innerHTML = h < 10 ? "0" + h : h;
+              minutes.innerHTML = m < 10 ? "0" + m : m;
+              seconds.innerHTML = s < 10 ? "0" + s : s;
+            }
+
+            setInterval(updateCountdown, 1000);
+          </script>
     </div>
-  </body>
+</body>
 
   <!-- Footer -->
   <footer class="bg-light text-center text-lg-start mt-auto">
@@ -136,7 +173,11 @@
       <!-- Section Text -->
       <section class="mb-auto text-center">
         <p>
-          The four developers of this website are; Saravanaaguru, Piravindraj, Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020 Semester. The developers developed this secure voting website for the Software Development Project that is currently being held at First City University College in the February 2022 semester. 
+          The four developers of this website are; Saravanaaguru, Piravindraj,
+          Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020
+          Semester. The developers developed this secure voting website for the
+          Software Development Project that is currently being held at First
+          City University College in the February 2022 semester.
         </p>
       </section>
     </div>
