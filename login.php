@@ -112,7 +112,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
       <div class="container py-3 h-10">
         <br>
 		<h1 style="text-align:center;">Welcome to First City University College Voting System</h1><br><br>
-		  <div class="row d-flex justify-content-center align-items-center h-100">
+		  <div class="row d-flex justify-content-center align-items-center h-100 mb-5">
           <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div
               class="card mx-auto shadow"
