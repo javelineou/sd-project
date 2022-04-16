@@ -25,7 +25,7 @@
 		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="../registrations1.css" >
+		<link rel="stylesheet" type="text/css" href="../registration.css" >
 		<title> Update student </title>
 	
 	</head>
@@ -160,8 +160,8 @@
 				</div>
 				<div class="input_field">
 					<label> Status </label>
-					<select class="selectbox" name="status">
-						<option value="student"> - Default - </option>
+					<select class="selectbox" name="admin_status">
+						<option value="0"> - Default - </option>
 					</select>
 				</div>
 				<div class="input_field">
@@ -190,15 +190,17 @@
 	{
 		$name 				= $_POST['name'];
 		$student_id 		= $_POST['student_id'];
-		$password 				= $_POST['password'];
+		$password 			= $_POST['password'];
 		$level_of_study 	= $_POST['level_of_study'];
 		$faculty 			= $_POST['faculty'];
 		$year 				= $_POST['year'];
-		$status				= $_POST['status'];
+		$admin_status		= $_POST['admin_status'];
 		$vote_status		= $_POST['vote_status'];
 	
 	
-		$query = "UPDATE student set name='$name', student_id='$student_id', password='$password', level_of_study='$level_of_study', faculty='$faculty', year='$year', status='$status', vote_status='$vote_status' WHERE student_id='$student_id' ";
+		$query = "UPDATE student set name='$name', student_id='$student_id', faculty='$faculty',  year='$year', password='$password', level_of_study='$level_of_study', admin_status='$admin_status', vote_status='$vote_status' WHERE student_id='$student_id' ";
+		
+		//$query = "UPDATE student set name='$name', student_id='$student_id', password='$password', level_of_study='$level_of_study', faculty='$faculty', year='$year', admin_status='$admin_status', vote_status='$vote_status' WHERE student_id='$student_id' ";
 		
 		$data = mysqli_query($conn, $query );
 		

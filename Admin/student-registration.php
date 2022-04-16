@@ -1,13 +1,13 @@
 <?php
 	include("../config.php");
 
-	// Starting session
-	// session_start();
+	//Starting session
+	//session_start();
 
-	// Check if user is whether or not an admin
-	// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
-	// header("location: ../logged-homepage.php");
-	// exit;
+	//Check if user is whether or not an admin
+	//if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+	//header("location: ../logged-homepage.php");
+	//exit;
 	// }
 ?>
 
@@ -37,53 +37,9 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
 		/>
-		<link rel="stylesheet" type="text/css" href="../registrations1.css" >
+		<link rel="stylesheet" type="text/css" href="../registration.css" >
 		<title> Student Registration </title>   
 	</head>
-	
-	    <!-- Header -->
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <!-- Container wrapper -->
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html">
-          <img
-            src="../img/fcuc-sc.png"
-            width="50"
-            height="50"
-            alt="FCUC Student Council Logo"
-          />
-        </a>
-        <!-- Toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-
-        <!-- Collapsible wrapper -->
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Button on Navbar -->
-          <a href="system_login_selection_page.html"><button
-            type="button"
-            class="btn btn-outline-primary me-3 shadow-sm btn-width">
-            Logout
-          </button></a>
-        </div>
-       <!-- Collapsible wrapper --> 
-         </div>
-      <!-- Container wrapper -->
-    </nav>
-  </header>
-
 
 <style>
 	.btn-3
@@ -163,8 +119,8 @@
 				</div>
 				<div class="input_field">
 					<label> Status </label>
-					<select class="selectbox" name="status">
-						<option value="student"> - Default - </option>
+					<select class="selectbox" name="admin_status">
+						<option value="0"> - Default - </option>
 					</select>
 				</div>
 				<div class="input_field">
@@ -183,38 +139,6 @@
 	</body>
 	
 	
-	  <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
-    <!-- Section Social media -->
-    <section class="mb-2 text-center">
-      <a
-        class="btn btn-outline-dark btn-floating m-1"
-        href="https://www.facebook.com/firstcityUC/"
-        role="button"
-        ><i class="bi bi-facebook"></i
-      ></a>
-      <a
-        class="btn btn-outline-dark btn-floating m-1"
-        href="https://www.instagram.com/firstcity.uc/"
-        role="button"
-        ><i class="bi bi-instagram"></i
-      ></a>
-      <a
-        class="btn btn-outline-dark btn-floating m-1"
-        href="https://firstcity.edu.my/"
-        role="button"
-        ><i class="bi bi-globe"></i
-      ></a>
-    </section>
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      ©2022 Copyright
-      <a class="text-dark" href="https://firstcity.edu.my/"
-        >First City University College</a
-      >
-    </div>
-  </footer>
 
 </html>
 
@@ -229,11 +153,11 @@
 		$level_of_study 	= $_POST['level_of_study'];
 		$faculty 			= $_POST['faculty'];
 		$year 				= $_POST['year'];
-		$status				= $_POST['status'];
+		$admin_status		= $_POST['admin_status'];
 		$vote_status		= $_POST['vote_status'];
 	
 	
-		$query = "INSERT INTO student VALUES('$name', '$student_id', '$faculty', '$year', '$password', '$level_of_study', '$status', '$vote_status')";
+		$query = "INSERT INTO student VALUES('$name', '$student_id', '$faculty', '$year', '$password', '$level_of_study', '$admin_status', '$vote_status')";
 		
 		$data = mysqli_query($conn, $query );
 		

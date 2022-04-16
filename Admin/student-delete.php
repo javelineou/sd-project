@@ -16,8 +16,7 @@
 	
 	if($data)
 		{
-			/* echo "<script>alert('Record Deleted')</script>"; */
-			echo "Record deleted";
+			echo "<script>alert('Record Deleted')</script>";
 			
 			?>
 		
