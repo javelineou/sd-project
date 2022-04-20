@@ -26,7 +26,9 @@
         $password = md5($_POST["password"]); //Password input converted into md5
 
         //Validate credentials
-            $sql = "SELECT student_id, admin_status from student where student_id='$studentId' and password='$password'";
+           $sql = "SELECT student_id, admin_status from student where student_id='$studentId' and password='$password'";
+
+
             $result = mysqli_query($conn, $sql);
 
         //Validate credentials using prepared statement
@@ -42,7 +44,8 @@
                 $_SESSION['student_id'] = $row['student_id'];
                 $_SESSION["admin_status"] = $row['admin_status'];
                 $_SESSION["loggedin"] = true;
-
+					
+				
                 if($_SESSION["admin_status"] == 1){
                     header("Location: admin-homepage.php");
                 }

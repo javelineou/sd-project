@@ -1,4 +1,12 @@
+<?php
+	
+   session_start();
+    if(!isset($_SESSION['student_id'])){
+        header("location: login.php");
+    }
 
+	
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -97,6 +105,7 @@
     </h3>
 
     <div class="container">
+	<form action="../vote-action.php" method="POST">
       <div class="row row-cols-4">
         <!-- Row One -->
         <div class="col">
@@ -123,11 +132,11 @@
 
           <div class="text-center">
             <button
-              type="button"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            >
+              type="submit" value="vote" name="vote"
+              class="btn btn-outline-primary me-3 shadow-sm btn-width">
               Vote Now
-            </button>
+		    </button>
+			
           </div>
         </div>
 
@@ -155,12 +164,11 @@
           <p><br /><br /><br /><br /><br /><br /><br /></p>
 
           <div class="text-center">
-            <button
-              type="button"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            >
+		  <button
+              type="submit" value="vote" name="vote"
+              class="btn btn-outline-primary me-3 shadow-sm btn-width">
               Vote Now
-            </button>
+		    </button>
           </div>
         </div>
 
@@ -189,12 +197,12 @@
           <p><br /><br /><br /><br /><br /><br /><br /></p>
 
           <div class="text-center">
+          		
             <button
-              type="button"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            >
+              type="submit" value="vote" name="vote"
+              class="btn btn-outline-primary me-3 shadow-sm btn-width">
               Vote Now
-            </button>
+		   </button>
           </div>
         </div>
 
@@ -204,6 +212,7 @@
 
           <img src="img/candidate4.jpg" class="img-fluid" alt="CCandidate 2" />
         </div>
+		
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -211,6 +220,7 @@
             <b>Degree in Software Engineering</b>
           </p>
         </div>
+		
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -221,17 +231,18 @@
 
         <div class="col">
           <p><br /><br /><br /><br /><br /><br /><br /></p>
-
           <div class="text-center">
+
             <button
-              type="button"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            >
+              type="submit" value="vote" name="vote"
+              class="btn btn-outline-primary me-3 shadow-sm btn-width">
               Vote Now
-            </button>
+		    </button>
           </div>
         </div>
+		
       </div>
+	</form>  
     </div>
     <p><br /><br /></p>
   </body>
