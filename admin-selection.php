@@ -1,17 +1,17 @@
 <?php 
-session_start();
+/* session_start(); */
  
 // Check if the user is logged in, otherwise redirect to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
+/* if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
   header("location: login.php");
   exit;
-}
+} */
 
 // Check if user is not admin, it'll redirect to logged homepage
-if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+/* if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
   header("location: logged-homepage.php");
   exit;
-}
+} */
 ?>
 
 <!DOCTYPE html>
@@ -39,59 +39,8 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <!-- Header -->
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <!-- Container wrapper -->
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
-          <img
-            src="img/fcuc-sc.png"
-            width="50"
-            height="50"
-            alt="FCUC Student Council Logo"
-          />
-        </a>
-        <!-- Toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Button on Navbar -->
-          <a
-            type="button"
-            class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            onclick="history.back()"
-          >
-            Back
-          </a>
-          <a
-            type="button"
-            class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="logout.php"
-          >
-            Logout
-          </a>
-        </div>
-        <!-- Collapsible wrapper -->
-      </div>
-      <!-- Container wrapper -->
-    </nav>
-  </header>
-
+   
+  <!-- style -->
   <style>
     .btn-3 {
       width: 300px;
@@ -113,6 +62,53 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
     }
   </style>
 
+<!--Navigation bar-->
+  	
+	<header>
+	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<!--logo-->
+			<a class="navbar-brand" href="#">
+				<img
+				src="img/fcuc-sc.png"
+				width="50"
+				height="50"
+				alt="FCUC Student Council Logo"
+				 />
+		  	</a>
+			<!--burger menu-->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				    <!--homepage link-->
+					<li class="nav-item ">
+					  <a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Student
+					  </a>
+					  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="Admin/student-registration.php">Register</a></li>
+						<li><a class="dropdown-item" href="Admin/student-display.php">Edit/Delete</a></li>
+					  </ul>
+					</li>
+				  </ul>
+				  			
+				   	<a href="../homepage.php" type="button"
+            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Logout</a>
+				  
+				</div>
+	  </div>
+	  </nav>
+	
+	</header>
+  <!--EOF Navigation bar-->
+
   <!-- Body -->
   <body class="slectmenu">
     <h3 class="pagetitle_student_delete">
@@ -120,24 +116,17 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
     </h3>
 
     <div class="container11">
+	  <a href="Admin/student-registration.php">
       <button class="btn-3">
         <i class="bi bi-person-plus"></i> <br />
         <br />Add <br />
         Student
       </button>
-      <a href="delete_student.html"
+	  </a>
+      <a href="Admin/student-display.php"
         ><button class="btn-3">
-          <i class="bi bi-archive"></i> <br /><br />Delete <br />
+          <i class="bi bi-archive"></i> <br /><br />Edit/Update <br />
           Student
-        </button></a
-      >
-      <button class="btn-3">
-        <i class="bi bi-person-plus-fill"></i> <br /><br />Add <br />Candidate
-      </button>
-      <a href="delete_candidate.html"
-        ><button class="btn-3">
-          <i class="bi bi-archive-fill"></i> <br /><br />Delete <br />
-          Candidate
         </button></a
       >
     </div>
@@ -168,11 +157,12 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
     </section>
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center p-3">
       ©2022 Copyright
       <a class="text-dark" href="https://firstcity.edu.my/"
         >First City University College</a
       >
     </div>
   </footer>
+  <!-- EOF Footer -->
 </html>

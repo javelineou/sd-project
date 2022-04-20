@@ -13,8 +13,33 @@
 <html>
 	<head>
 		
-		<title> Display students </title>
-		<style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		 <!-- Bootstrap CSS -->
+		<link
+		  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		  rel="stylesheet"
+		  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		  crossorigin="anonymous"
+		/>
+		<script
+		  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		  crossorigin="anonymous"
+		></script>
+		<!-- Bootstrap Icon Lib-->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+		/>
+		
+		<link rel="stylesheet" type="text/css" href="../registration.css" >
+		<title> Display student </title>
+	
+	</head>
+	
+	<style>
 			
 			body
 			{
@@ -39,8 +64,61 @@
 			{
 				background-color: red;
 			}
+			footer{
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
 		</style>
-	</head>
+	
+	
+	<!--Navigation bar-->
+  	
+	<header>
+	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<!--logo-->
+			<a class="navbar-brand" href="../admin-selection.php">
+				<img
+				src="../img/fcuc-sc.png"
+				width="50"
+				height="50"
+				alt="FCUC Student Council Logo"
+				 />
+		  	</a>
+			<!--burger menu-->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				    <!--homepage link-->
+					<li class="nav-item">
+					  <a class="nav-link	" aria-current="page" href="../admin-selection.php">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Student
+					  </a>
+					  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="student-registration.php">Register</a></li>
+						<li><a class="dropdown-item" href="student-display.php">Edit/Delete</a></li>
+					  </ul>
+					</li>
+				  </ul>
+				  			
+				   	<a href="../homepage.php" type="button"
+            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Logout</a>
+				  
+				</div>
+	  </div>
+	  </nav>
+	
+	</header>
+  <!--EOF Navigation bar-->
 
 
 <?php
@@ -67,6 +145,7 @@
 				<th width="5%">Status</th>
 				<th width="5%">Vote Status</th>
 				<th width="10%">Operations</th>
+
 			
 			
 		<?php
@@ -95,7 +174,40 @@
 </table>
 </center>
 
+<!-- Footer -->
+  <footer class="bg-light text-center text-lg-start mt-auto">
+    <!-- Section Social media -->
+    <section class="mb-2 text-center">
+      <a
+        class="btn btn-outline-dark btn-floating m-1"
+        href="https://www.facebook.com/firstcityUC/"
+        role="button"
+        ><i class="bi bi-facebook"></i
+      ></a>
+      <a
+        class="btn btn-outline-dark btn-floating m-1"
+        href="https://www.instagram.com/firstcity.uc/"
+        role="button"
+        ><i class="bi bi-instagram"></i
+      ></a>
+      <a
+        class="btn btn-outline-dark btn-floating m-1"
+        href="https://firstcity.edu.my/"
+        role="button"
+        ><i class="bi bi-globe"></i
+      ></a>
+    </section>
 
+    <!-- Copyright -->
+    <div class="text-center p-3">
+      ©2022 Copyright
+      <a class="text-dark" href="https://firstcity.edu.my/"
+        >First City University College</a
+      >
+    </div>
+  </footer>
+<!-- EOF Footer -->
+</html>
 
 <script>
 	
