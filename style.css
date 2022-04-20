@@ -165,12 +165,13 @@ body {
 .fade {
 	animation-name: fade;
 	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
 	
 }
 
 @keyframes fade{
-	from {opacity: .4}
-	to {opacity: 1}
+	from {opacity: .4;}
+	to {opacity: 1;}
 }
 
 
@@ -216,6 +217,13 @@ body {
 
 
 @media (max-width: 480px) {
+	
+	/*Image slider text in homepage for mobile screen */
+	.prev, .next,.text {
+		font-size: 11px;
+	}
+	
+	
   /*Grid for small information section after the slide in Homepage*/
   .grid-container1 {
     display: grid;

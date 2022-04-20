@@ -109,24 +109,36 @@ session_start();
 
   <!-- Body -->
   <body>
-    <div class="slidecenter">
-      <img
-        class="voteimageslide"
-        src="img/voterightimage1.jpg"
-        alt="Vote Right Image 1"
-      />
-      <img
-        class="voteimageslide"
-        src="img/voterightimage2.png"
-        alt="Vote Right Image 2"
-      />
-      <img
-        class="voteimageslide"
-        src="img/voterightimage3.jpg"
-        alt="Vote Right Image 3"
-      />
-    </div>
-
+    
+	<!-- slideshow container -->
+	<div class = "slideshow-container">
+	
+	<!-- Full width image with number and caption -->
+	<div class = "mySlides fade">
+		<div class = "numbertext">1 / 2</div>
+		<img src = "img/voterightimage1.jpg" style = "width: 100%">
+		<div class = "text"> VOTE IS OUR RIGHT</div>
+	</div>
+	
+	<div class = "mySlides fade">
+		<div class = "numbertext">2 / 2</div>
+		<img src = "img/voterightimage2.png" style = "width: 100%">
+		<div class = "text"> VOTE WISELY NOW</div>
+	</div>
+	
+	
+	<!-- Next and previous button -->
+	<a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+	<a class = "next" onclick = "plusSlides(1)">&#10095;</a>
+	</div>
+	
+	
+	<!-- The dots below slider -->
+	<div style = "text-align: center">
+		<span class = "dot" onclick = "currentSlide(1)"> </span>
+		<span class = "dot" onclick = "currentSlide(2)"> </span>
+	</div>
+   
     <p><br /><br /></p>
 
     <div class="grid-container1">
@@ -189,23 +201,47 @@ session_start();
     </div>
   </footer>
 
-  <script>
-    /*Automatic Slide*/
-    var myIndex = 0;
-    carousel();
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("voteimageslide");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {
-        myIndex = 1;
-      }
-      x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 5000); // Change image every 5 seconds
-    }
-  </script>
+//Next and previous control
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+// Thumbnail image control
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+	let i;
+	let slides = document.getElementsByClassName("mySlides");
+	let dots = document.getElementsByClassName("dot");
+	
+	if (n > slides.length) {
+		slideIndex = 1
+	}
+	
+	if (n < 1) {
+		slideIndex = slides.length
+	}
+	
+	
+	
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+}
+
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+}
+
+
+</script>
 </html>
