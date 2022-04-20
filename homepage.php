@@ -105,24 +105,43 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
 
   <!-- Body -->
   <body>
-    <div class="slidecenter">
-      <img
-        class="voteimageslide"
-        src="img/voterightimage1.png"
-        alt="Vote Right Image 1"
-      />
-      <img
-        class="voteimageslide"
-        src="img/voterightimage2.jpg"
-        alt="Vote Right Image 2"
-      />
-      <img
-        class="voteimageslide"
-        src="img/voterightimage3.jpg"
-        alt="Vote Right Image 3"
-      />
-    </div>
-
+    
+	<!-- slideshow container -->
+	<div class = "slideshow-container">
+	
+	<!-- Full width image with number and caption -->
+	<div class = "mySlides fade">
+		<div class = "numbertext">1 / 3</div>
+		<img src = "img/voterightimage1.jpg" style = "width: 100%">
+		<div class = "text"> VOTE IS OUR RIGHT</div>
+	</div>
+	
+	<div class = "mySlides fade">
+		<div class = "numbertext">2 / 3</div>
+		<img src = "img/voterightimage2.png" style = "width: 100%">
+		<div class = "text"> VOTE WISELY NOW</div>
+	</div>
+	
+	<div class = "mySlides fade">
+		<div class = "numbertext">3 / 3</div>
+		<img src = "img/voterightimage3.jpg" style = "width: 100%">
+		<div class = "text"> CHOOSE YOUR LEADER WISELY</div>
+	</div>
+	
+	
+	<!-- Next and previous button -->
+	<a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+	<a class = "next" onclick = "plusSlides(1)">&#10095;</a>
+	</div>
+	
+	
+	<!-- The dots below slider -->
+	<div style = "text-align: center">
+		<span class = "dot" onclick = "currentSlide(1)"> </span>
+		<span class = "dot" onclick = "currentSlide(2)"> </span>
+		<span class = "dot" onclick = "currentSlide(3)"> </span>
+	</div>
+	
     <p><br /><br /></p>
 
     <div class="grid-container1">
@@ -153,32 +172,6 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
 	
 <h4 class= "pagetitle">Meet The Candidates of the Election<br/><br/></h4>
 
-<div class = "candidatelist">
-<div class = "candidate1">
-<img src="img/candidate1.jpg" class = "c1" alt = "Candidate 1" title="Candidate 1"/>
-<div class="overlay">
-    <div class="text">CANDIDATE 1 - <br/><b>[JAKE PERALTA]</b></div>
-  </div>
-</div>
-<div class = "candidate2">
-<img src="img/candidate2.jpg" class= "c2" alt = "Candidate 2" title = "Candidate 2"/>
-<div class="overlay">
-    <div class="text">CANDIDATE 2 - <br/><b>[AMY SANTIAGO]</b></div>
-  </div>
-</div>
-<div class = "candidate3">
-<img src="img/candidate3.jpg" class = "c3" alt = "Candidate 3" title = "Candidate 3"/>
-<div class="overlay">
-    <div class="text">CANDIDATE 3 - <br/><b>[ROSA DIAZ]</b></div>
-  </div>
-</div>
-<div class = "candidate4">
-<img src="img/candidate4.jpg" class = "c4" alt = "Candidate 4" title = "Candidate 4"/>
-<div class="overlay">
-    <div class="text">CANDIDATE 4 - <br/><b>[CHARLES BOYLE]</b></div>
-  </div>
-</div>
-</div>
 
 <p><br /><br /><br /><br /></p>	
   </body>
@@ -216,23 +209,48 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
     </div>
   </footer>
 
-  <script>
-    /*Automatic Slide*/
-    var myIndex = 0;
-    carousel();
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("voteimageslide");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {
-        myIndex = 1;
-      }
-      x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 5000); // Change image every 5 seconds
-    }
-  </script>
+//Next and previous control
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+// Thumbnail image control
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+	let i;
+	let slides = document.getElementsByClassName("mySlides");
+	let dots = document.getElementsByClassName("dot");
+	
+	if (n > slides.length) {
+		slideIndex = 1
+	}
+	
+	if (n < 1) {
+		slideIndex = slides.length
+	}
+	
+	
+	
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+}
+
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
 </html>

@@ -73,41 +73,107 @@ body {
 }
 
 /*Homepage's slideshow styling*/
-.slidecenter {
-  margin-left: auto;
-  margin-right: auto;
+* {
+	box-sizing: border-box;
 }
 
-.voteimageslide {
-  display: none;
-  width: 100%;
-  height: auto;
+/* Slideshow container */
+.slideshow-container{
+	position: relative;
+	margin: auto;
 }
 
-#left,
-#right {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 100px;
-  height: auto;
-  margin-top: -22px;
-  padding: 16px;
-  font-weight: bold;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+/* Hide images by default */
+.mySlides {
+	display: none;
 }
 
-#right {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+/* Next & Previous Button */
+.prev , .next{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	
 }
 
-#left:hover,
-#right:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+/* Next button at right side */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+	
 }
+
+
+/* Hover effect */
+.prev:hover , .next:hover{
+	background-color: rgba(0,0,0,0.8);
+	
+}
+
+/* caption styling */
+.text{
+	color: #f2f2f2;
+	font-size: 18px;
+	font-family: verdana;
+	font-weight: bold;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	
+}
+
+/* Number text styling */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+	
+}
+
+/* Dots below image slider styling */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	
+}
+
+.active , .dot:hover{
+	background-color: #717171;
+	
+}
+
+/* Animation for fading */
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+	
+}
+
+@keyframes fade{
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+
 
 /*Grid for small information section after the slide in Homepage*/
 .grid-container1 {
@@ -143,105 +209,6 @@ body {
   grid-row: 2;
   text-align: left;
   font-size: 18px;
-}
-
-
-/*Candidate List in Homepage*/
-.candidatelist{
-	display: grid;
-	grid-gap: 100px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas:
-	"team1 team2 team3 team4"
-}
-
-.candidate1{
-	grid-area: team1;
-	position: relative;
-	width: 100%;
-}
-
-.candidate2{
-	grid-area: team2;
-	position: relative;
-	width: 100%;
-}
-
-.candidate3{
-	grid-area: team3;
-	position: relative;
-	width: 100%;
-}
-
-.candidate4{
-	grid-area: team4;
-	position: relative;
-	width: 100%;
-}
-
-.c1{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.c2{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.c3{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.c4{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #0082e6;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-}
-
-.candidate1:hover .overlay {
-  height: 20%;
-}
-
-.candidate2:hover .overlay {
-  height: 20%;
-}
-
-.candidate3:hover .overlay {
-  height: 20%;
-}
-
-.candidate4:hover .overlay {
-  height: 20%;
-}
-
-.text {
-  color: white;
-  font-size: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 
@@ -285,35 +252,6 @@ body {
     text-align: left;
     font-size: 12px;
   }
-  
-  
- /*Candidates List in Homepage for mobile view*/
-.candidatelist{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	grid-template-areas:
-	"candidate1"
-	"candidate2"
-	"candidate3"
-	"candidate4"
-}
-
-.candidate1{
-	grid-area: candidate1;
-}
-
-.candidate2{
-	grid-area: candidate2;
-}
-
-.candidate3{
-	grid-area: candidate3;
-}
-
-.candidate4{
-	grid-area: candidate4;
-}
   
 }
 
