@@ -161,12 +161,46 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
         </p>
       </div>
     </div>
-    <p><br /><br /><br /><br /></p>
+    <p><br /><br /><br /></p>
 	
 <h4 class= "pagetitle">Meet The Candidates of the Election<br/><br/></h4>
 
+<div class = "row">
+	<div class = "column">
+		<div class = "card">
+			<img src = "img/Candidate1.jpg" alt = "Candidate 1" style = "width:100%">
+			<div class = "container">
+				<h2>Edward Santos</h2>
+				<p class= "title">ARTS & DESIGN - YEAR 2</p>
+				<p> "Your Education, Your Life, Your School, Our Time Is Now. Vote for Edward Santos, your voice!"</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "column">
+		<div class = "card">
+			<img src = "img/Candidate2.jpg" alt = "Candidate 2" style = "width:100%">
+			<div class = "container">
+				<h2>Melissa Carlos</h2>
+				<p class= "title">BCSIS - YEAR 1</p>
+				<p> "You’ve seen the best now choose the best, vote for me, Melissa Carlos."</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "column">
+		<div class = "card">
+			<img src = "img/Candidate3.jpg" alt = "Candidate 3" style = "width:100%">
+			<div class = "container">
+				<h2>Alyssa Carly</h2>
+				<p class= "title">BITNS - YEAR 3</p>
+				<p>  "Vote 4 Alyssa. I promise I’ll do my best I’ll never stop to take a rest."</p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<p><br /><br /><br /><br /></p>	
+<p><br /><br /><br /></p>	
   </body>
 
   <!-- Footer -->

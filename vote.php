@@ -115,15 +115,15 @@
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br />
-            <b>Jake Peralta </b>is a student of the <b>Year 3</b> course of
-            <b>Degree in Information Technology(Network & Security)</b>
+            <b>Edward Santos </b>is a student of the <b>Year 2</b> course of
+            <b>Degree in Arts & Design</b>
           </p>
         </div>
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br />
             "Your Education, Your Life, Your School, Our Time Is Now. Vote for
-            Jake Peralta, your future!"
+            Edward Santos, your voice!"
           </p>
         </div>
 
@@ -149,14 +149,14 @@
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br /><br />
-            <b>Amy Santiago </b>is a student of the <b>Year 2</b> course of
+            <b>Melissa Carlos </b>is a student of the <b>Year 1</b> course of
             <b>Degree in Computer Science(Intelligence System)</b>
           </p>
         </div>
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br /><br />
-            "You’ve seen the best now choose the best, vote for [AMY SANTIAGO]."
+            "You’ve seen the best now choose the best, vote for Melissa Carlos."
           </p>
         </div>
 
@@ -181,14 +181,14 @@
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br /><br />
-            <b>Rosa Diaz </b>is a student of the <b>Year 3</b> course of
+            <b>Alyssa Carly </b>is a student of the <b>Year 3</b> course of
             <b>Degree in Information Technology(Network & Security)</b>
           </p>
         </div>
         <div class="col">
           <p>
             <br /><br /><br /><br /><br /><br /><br /><br />
-            "Vote 4 Rosa Diaz. I promise I’ll do my best I’ll never stop to take
+            "Vote 4 Alyssa. I promise I’ll do my best I’ll never stop to take
             a rest."
           </p>
         </div>
@@ -204,43 +204,7 @@
               Vote Now
 		   </button>
           </div>
-        </div>
-
-        <!-- Row Four -->
-        <div class="col">
-          <p><br /><br /></p>
-
-          <img src="img/candidate4.jpg" class="img-fluid" alt="CCandidate 2" />
-        </div>
-		
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            <b>Charles Boyle </b>is a student of the <b>Year 1</b> course of
-            <b>Degree in Software Engineering</b>
-          </p>
-        </div>
-		
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            "Students Need Their Own Voice. So Make The Right Choice. Take a
-            stand! The results will be grand! Vote for Charles Boyle."
-          </p>
-        </div>
-
-        <div class="col">
-          <p><br /><br /><br /><br /><br /><br /><br /></p>
-          <div class="text-center">
-
-            <button
-              type="submit" value="vote" name="vote"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width">
-              Vote Now
-		    </button>
-          </div>
-        </div>
-		
+        </div>	
       </div>
 	</form>  
     </div>
