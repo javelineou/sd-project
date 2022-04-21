@@ -99,7 +99,7 @@
 					</li>
 				  </ul>
 				  			
-				   	<a href="../homepage.php" type="button"
+				   	<a href="admin-homepage.php" type="button"
             		class="btn btn-outline-primary me-3 shadow-sm btn-width">Logout</a>
 				  
 				</div>

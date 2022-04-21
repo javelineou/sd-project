@@ -76,10 +76,10 @@
             </li>
           </ul>
           <!-- Button on Navbar -->
-          <a
+           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="vote.html"
+            href="#"
           >
             Vote
           </a>
@@ -90,7 +90,7 @@
             href="#"
           >
             Login
-          </a>
+          </a> 
         </div>
         <!-- Collapsible wrapper -->
       </div>

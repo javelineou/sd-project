@@ -75,6 +75,7 @@ if(isset($_POST['submit_contact'])){
     <!-- reCaptcha script -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
+	
 
   <!-- Header -->
   <header>
@@ -206,23 +207,12 @@ if(isset($_POST['submit_contact'])){
     </div>
   </body>
 
-  <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <h5 class="text-uppercase text-center">About Developers</h5>
-      <!-- Section Text -->
-      <section class="mb-auto text-center">
-        <p>
-          The four developers of this website are; Saravanaaguru, Piravindraj,
-          Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020
-          Semester. The developers developed this secure voting website for the
-          Software Development Project that is currently being held at First
-          City University College in the February 2022 semester.
-        </p>
-      </section>
-    </div>
+</br>
+</br>
+</br>
 
+ <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start mt-auto">
     <!-- Section Social media -->
     <section class="mb-2 text-center">
       <a
@@ -246,11 +236,12 @@ if(isset($_POST['submit_contact'])){
     </section>
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center p-3">
       ©2022 Copyright
       <a class="text-dark" href="https://firstcity.edu.my/"
         >First City University College</a
       >
     </div>
   </footer>
+  <!-- EOF Footer -->
 </html>

@@ -86,7 +86,7 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="vote.php"
           >
             Vote
           </a>
