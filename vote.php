@@ -32,6 +32,11 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+	
+	 <!-- responsive cards CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
   </head>
 
   <!-- Header -->
@@ -100,115 +105,60 @@
 
   <!-- Body -->
   <body>
-    <h3 class="pagetitle">
-      <br /><br />CANDIDATES OF THE ELECTION<br /><br />
-    </h3>
+    <h2 class="pagetitle">
+      <br />VOTE FOR THE CANDIDATES
+    </h2>
+	<h6 class="pagetitle" style="font-size:20px" >
+    scroll and choose your candidate<br />
+    </h6>
+	<br />
 
-    <div class="container">
-	<form action="../vote-action.php" method="POST">
-      <div class="row row-cols-4">
-        <!-- Row One -->
-        <div class="col">
-          <p><br /></p>
-          <img src="img/candidate1.jpg" class="img-fluid" alt="CCandidate 1" />
-        </div>
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br />
-            <b>Edward Santos </b>is a student of the <b>Year 2</b> course of
-            <b>Degree in Arts & Design</b>
-          </p>
-        </div>
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br />
-            "Your Education, Your Life, Your School, Our Time Is Now. Vote for
-            Edward Santos, your voice!"
-          </p>
-        </div>
+	<!--Candidate card -->
+	 
+	<div class="blog-slider">
+	  <div class="blog-slider__wrp swiper-wrapper">
 
-        <div class="col">
-          <p><br /><br /><br /><br /><br /><br /></p>
-
-          <div class="text-center">
-            <button
-              type="submit" value="vote" name="vote"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width">
-              Vote Now
-		    </button>
-			
-          </div>
-        </div>
-
-        <!-- Row Two -->
-        <div class="col">
-          <p><br /><br /></p>
-
-          <img src="img/candidate2.jpg" class="img-fluid" alt="CCandidate 2" />
-        </div>
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            <b>Melissa Carlos </b>is a student of the <b>Year 1</b> course of
-            <b>Degree in Computer Science(Intelligence System)</b>
-          </p>
-        </div>
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            "You’ve seen the best now choose the best, vote for Melissa Carlos."
-          </p>
-        </div>
-
-        <div class="col">
-          <p><br /><br /><br /><br /><br /><br /><br /></p>
-
-          <div class="text-center">
-		  <button
-              type="submit" value="vote" name="vote"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width">
-              Vote Now
-		    </button>
-          </div>
-        </div>
-
-        <!-- Row Three -->
-        <div class="col">
-          <p><br /><br /></p>
-
-          <img src="img/candidate3.jpg" class="img-fluid" alt="Candidate 3" />
-        </div>
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            <b>Alyssa Carly </b>is a student of the <b>Year 3</b> course of
-            <b>Degree in Information Technology(Network & Security)</b>
-          </p>
-        </div>
-        <div class="col">
-          <p>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            "Vote 4 Alyssa. I promise I’ll do my best I’ll never stop to take
-            a rest."
-          </p>
-        </div>
-
-        <div class="col">
-          <p><br /><br /><br /><br /><br /><br /><br /></p>
-
-          <div class="text-center">
-          		
-            <button
-              type="submit" value="vote" name="vote"
-              class="btn btn-outline-primary me-3 shadow-sm btn-width">
-              Vote Now
-		   </button>
-          </div>
-        </div>	
-      </div>
-	</form>  
-    </div>
-    <p><br /><br /></p>
+		<div class="blog-slider__item swiper-slide">
+		  <div class="blog-slider__img">
+			<img src="img/guru.jpg" alt="">
+		  </div>
+		  <div class="blog-slider__content">
+			<span class="blog-slider__code">Bachelors Degree in IT</span>
+			<div class="blog-slider__title">SARAVANAAGURU MANIVANNAN</div>
+			<div class="blog-slider__text">Somewhere inside all of us is the power to change the world </div>
+			<a href="#" class="blog-slider__button">VOTE</a>
+		  </div>
+		</div>
+		
+		<div class="blog-slider__item swiper-slide">
+		  <div class="blog-slider__img">
+			<img src="img/tristan.jpg" alt="">
+		  </div>
+		  <div class="blog-slider__content">
+			<span class="blog-slider__code">Bachelors Degree in CS</span>
+			<div class="blog-slider__title">ADRIANUS TRISTAN</div>
+			<div class="blog-slider__text">what you do has far greater impact than what you say</div>
+			<a href="#" class="blog-slider__button">VOTE</a>
+		  </div>
+		</div>
+		
+		<div class="blog-slider__item swiper-slide">
+		  <div class="blog-slider__img">
+			<img src="img/raj.jpg" alt="">
+		  </div>
+		  <div class="blog-slider__content">
+			<span class="blog-slider__code">Bachelors Degree in Data Science</span>
+			<div class="blog-slider__title">PIRAVINDRAJ</div>
+			<div class="blog-slider__text">A good education is the foundation for better future</div>
+			<a href="#" class="blog-slider__button">VOTE</a>
+		  </div>
+		</div>
+		
+	  </div>
+	  <div class="blog-slider__pagination"></div>
+	</div>
+<!--EOF Candidate card -->
+    <p><br /></p>
   </body>
 
   <!-- Footer -->
@@ -244,3 +194,18 @@
     </div>
   </footer>
 </html>
+<script>
+	var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+</script>
