@@ -1,11 +1,12 @@
 <?php
 	include("config.php");
-   session_start();
-    if(!isset($_SESSION['student_id'])){
-        header("location: login.php");
-    }
-	
-	$student_id = $_SESSION['student_id'];
+  session_start();
+
+  // Check if the user is logged in, otherwise redirect to login page
+  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -108,9 +109,9 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="logout.php"
           >
-            Login
+            Logout
           </a> 
         </div>
         <!-- Collapsible wrapper -->
@@ -123,7 +124,7 @@
   <body>
 	</br>
 	<h2 class="pagetitle" style= " color:Blue;">
-      Welcome <?php echo $_SESSION['student_id']  ?>
+      Welcome, <?php echo $_SESSION['student_id']  ?>
     </h2>
 	
     <h2 class="pagetitle">
@@ -138,7 +139,7 @@
 	  <div class="col-12">
 		<label class="visually-hidden" for="student_id">student ID</label>
 		<div class="input-group">
-		  <input type="text" class="form-control" id="student ID" value="<?php echo $student_id  ?>" readonly>
+		  <input type="text" class="form-control" id="student ID" value="<?php echo $_SESSION['student_id'] ?>" readonly>
 		</div>
 	  </div>
 
@@ -205,9 +206,6 @@
 	</div>
 <!--EOF Candidate card -->
     <p><br /></p>
-	
-	
-	
   </body>
 
   <!-- Footer -->
