@@ -1,12 +1,11 @@
 <?php
-	
+	include("config.php");
    session_start();
     if(!isset($_SESSION['student_id'])){
         header("location: login.php");
     }
-
-	
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -105,8 +104,13 @@
 
   <!-- Body -->
   <body>
+	</br>
+	<h2 class="pagetitle" style= " color:Blue;">
+      Welcome <?php echo $_SESSION['student_id']  ?>
+    </h2>
+	
     <h2 class="pagetitle">
-      <br />VOTE FOR THE CANDIDATES
+      VOTE For 1 Deserved Candidate
     </h2>
 	<h6 class="pagetitle" style="font-size:20px" >
     scroll and choose your candidate<br />
@@ -125,7 +129,7 @@
 		  <div class="blog-slider__content">
 			<span class="blog-slider__code">Bachelors Degree in IT</span>
 			<div class="blog-slider__title">SARAVANAAGURU MANIVANNAN</div>
-			<div class="blog-slider__text">Somewhere inside all of us is the power to change the world </div>
+			<div class="blog-slider__text">"Somewhere inside all of us is the power to change the world"</div>
 			<a href="#" class="blog-slider__button">VOTE</a>
 		  </div>
 		</div>
@@ -137,7 +141,7 @@
 		  <div class="blog-slider__content">
 			<span class="blog-slider__code">Bachelors Degree in CS</span>
 			<div class="blog-slider__title">ADRIANUS TRISTAN</div>
-			<div class="blog-slider__text">what you do has far greater impact than what you say</div>
+			<div class="blog-slider__text">"what you do has far greater impact than what you say"</div>
 			<a href="#" class="blog-slider__button">VOTE</a>
 		  </div>
 		</div>
@@ -149,7 +153,7 @@
 		  <div class="blog-slider__content">
 			<span class="blog-slider__code">Bachelors Degree in Data Science</span>
 			<div class="blog-slider__title">PIRAVINDRAJ</div>
-			<div class="blog-slider__text">A good education is the foundation for better future</div>
+			<div class="blog-slider__text">"A good education is the foundation for better future"</div>
 			<a href="#" class="blog-slider__button">VOTE</a>
 		  </div>
 		</div>
@@ -209,3 +213,4 @@
       }
     });
 </script>
+
