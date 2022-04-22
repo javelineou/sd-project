@@ -23,16 +23,14 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $studentId = $_POST["studentId"];
         //$studentId = $mysqli -> real_escape_string($_POST['studentId']);
-        //$password = md5($_POST["password"]); //Password input converted into md5
+        $password = md5($_POST["password"]); //Password input converted into md5
 		
-		//for temporary use
-		 $password = $_POST["password"]; //Password input converted into md5
+		//Get password without MD5 hash
+		//$password = $_POST["password"];
 
         //Validate credentials
            $sql = "SELECT student_id, admin_status from student where student_id='$studentId' and password='$password'";
-
-
-            $result = mysqli_query($conn, $sql);
+           $result = mysqli_query($conn, $sql);
 
         //Validate credentials using prepared statement
         //  $sql = "SELECT student_id, admin_status from student where student_id=? and password=?"; 
