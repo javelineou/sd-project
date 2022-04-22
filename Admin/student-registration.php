@@ -11,9 +11,7 @@
 	// }
 ?>
 
-
 <!DOCTYPE html>
-
 <html lang="en">
 	
 	<head>
@@ -40,7 +38,6 @@
 		<link rel="stylesheet" type="text/css" href="../registration.css" >
 		<title> Student Registration </title>   
 	</head>
-  
    
 <!--Navigation bar-->
  
@@ -85,7 +82,6 @@
 	
 	</header>
   <!--EOF Navigation bar-->
-  
 	<body>
 		<div class="container"> 
 		<form action="#" method="POST" >
@@ -192,11 +188,7 @@
     </div>
   </footer>
 <!-- EOF Footer -->
-	
-	
-
 </html>
-
 
 <?php
 	
@@ -204,7 +196,8 @@
 	{
 		$name 				= $_POST['name'];
 		$student_id 		= $_POST['student_id'];
-		$password 			= $_POST['password'];
+		//$password 			= $_POST['password'];
+		$password 			= md5($_POST['password']);
 		$level_of_study 	= $_POST['level_of_study'];
 		$faculty 			= $_POST['faculty'];
 		$year 				= $_POST['year'];
@@ -214,7 +207,7 @@
 	
 		$query = "INSERT INTO student VALUES('$name', '$student_id', '$faculty', '$year', '$password', '$level_of_study', '$admin_status', '$vote_status')";
 		
-		$data = mysqli_query($conn, $query );
+		$data = mysqli_query($conn, $query);
 		
 		if($data)
 		{
