@@ -7,7 +7,7 @@
       exit;
   }
 
-  //header('Refresh: 10; URL=logged-homepage.php');
+  header('Refresh: 10; URL=logged-homepage.php');
 ?>
 
 <!DOCTYPE html>

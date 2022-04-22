@@ -7,7 +7,7 @@
       exit;
   }
 
-  //header('Refresh: 10; URL=logged-homepage.php');
+  header('Refresh: 10; URL=logged-homepage.php');
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +82,7 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="vote.php"
           >
             Vote
           </a>
