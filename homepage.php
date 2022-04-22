@@ -111,13 +111,11 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
 	
 	<!-- Full width image with number and caption -->
 	<div class = "mySlides fade">
-		<div class = "numbertext">1 / 2</div>
 		<img src = "img/voterightimage1.jpg" style = "width: 100%">
 		<div class = "text"> VOTE IS OUR RIGHT</div>
 	</div>
 	
 	<div class = "mySlides fade">
-		<div class = "numbertext">2 / 2</div>
 		<img src = "img/voterightimage2.png" style = "width: 100%">
 		<div class = "text"> VOTE WISELY NOW</div>
 	</div>

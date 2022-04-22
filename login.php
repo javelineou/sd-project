@@ -163,25 +163,10 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
     </section>
   </body>
 
-  <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <h5 class="text-uppercase text-center">About Developers</h5>
-      <!-- Section Text -->
-      <section class="mb-auto text-center">
-        <p>
-          The four developers of this website are; Saravanaaguru, Piravindraj,
-          Adrianus Tristan and Leong Min Yi, of the BITNS course - OCT 2020
-          Semester. The developers developed this secure voting website for the
-          Software Development Project that is currently being held at First
-          City University College in the February 2022 semester.
-        </p>
-      </section>
-    </div>
-
+    <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->
-    <section class="mb-2 text-center">
+    <section class="mt-4 text-center">
       <a
         class="btn btn-outline-dark btn-floating m-1"
         href="https://www.facebook.com/firstcityUC/"
@@ -203,11 +188,12 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
     </section>
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center p-3">
       ©2022 Copyright
       <a class="text-dark" href="https://firstcity.edu.my/"
         >First City University College</a
       >
     </div>
   </footer>
+   <!--EOF Footer -->
 </html>
