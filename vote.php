@@ -4,6 +4,8 @@
     if(!isset($_SESSION['student_id'])){
         header("location: login.php");
     }
+	
+	$student_id = $_SESSION['student_id'];
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +40,21 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
   </head>
 
+	<style>
+		.container
+			{
+				max-width:500px;
+				width:100%;
+				background-color:white;
+				margin:20px auto;
+				padding:30px;
+				box-shadow:5px 5px 5px rgba(0, 0, 0, 0.5);
+			}
+		.container .form
+			{
+				width: 100%;
+			}
+	</style>
   <!-- Header -->
   <header>
     <!-- Navbar -->
@@ -110,15 +127,42 @@
     </h2>
 	
     <h2 class="pagetitle">
-      VOTE For 1 Deserved Candidate
+      Vote For 1 Deserved Candidate
     </h2>
-	<h6 class="pagetitle" style="font-size:20px" >
-    scroll and choose your candidate<br />
-    </h6>
 	<br />
+	
+	<!--Vote form-->
+	<div class="container">
+	<form class="row row-cols-lg-auto g-3 align-items-center" action="vote-action.php" method="POST">
+	
+	  <div class="col-12">
+		<label class="visually-hidden" for="student_id">student ID</label>
+		<div class="input-group">
+		  <input type="text" class="form-control" id="student ID" value="<?php echo $student_id  ?>" readonly>
+		</div>
+	  </div>
 
+	  <div class="col-12">
+		<label class="visually-hidden" for="candidate_id">Candidate ID</label>
+		<select class="form-select" id="candidate_id" name="candidate_id" required>
+		  <option value="">Choose...</option>
+		  <option value="B1454">Saravanaaguru</option>
+		  <option value="B1745">Tristan</option>
+		  <option value="B1404">Piravindraj</option>
+		</select>
+	  </div>
+
+	  <div class="d-grid gap-2 col-6 mx-auto">
+		<input type="submit" value="Vote" class="btn btn-primary" name="submit">
+	  </div>
+	  
+	</form>
+	</div>
+	
+	<p><br /></p>
+	<!--EOF Vote form-->
+	
 	<!--Candidate card -->
-	 
 	<div class="blog-slider">
 	  <div class="blog-slider__wrp swiper-wrapper">
 
@@ -130,7 +174,6 @@
 			<span class="blog-slider__code">Bachelors Degree in IT</span>
 			<div class="blog-slider__title">SARAVANAAGURU MANIVANNAN</div>
 			<div class="blog-slider__text">"Somewhere inside all of us is the power to change the world"</div>
-			<a href="#" class="blog-slider__button">VOTE</a>
 		  </div>
 		</div>
 		
@@ -142,7 +185,6 @@
 			<span class="blog-slider__code">Bachelors Degree in CS</span>
 			<div class="blog-slider__title">ADRIANUS TRISTAN</div>
 			<div class="blog-slider__text">"what you do has far greater impact than what you say"</div>
-			<a href="#" class="blog-slider__button">VOTE</a>
 		  </div>
 		</div>
 		
@@ -150,11 +192,11 @@
 		  <div class="blog-slider__img">
 			<img src="img/raj.jpg" alt="">
 		  </div>
+		  
 		  <div class="blog-slider__content">
 			<span class="blog-slider__code">Bachelors Degree in Data Science</span>
 			<div class="blog-slider__title">PIRAVINDRAJ</div>
 			<div class="blog-slider__text">"A good education is the foundation for better future"</div>
-			<a href="#" class="blog-slider__button">VOTE</a>
 		  </div>
 		</div>
 		
@@ -163,6 +205,9 @@
 	</div>
 <!--EOF Candidate card -->
     <p><br /></p>
+	
+	
+	
   </body>
 
   <!-- Footer -->
@@ -198,6 +243,7 @@
     </div>
   </footer>
 </html>
+
 <script>
 	var swiper = new Swiper('.blog-slider', {
       spaceBetween: 30,
