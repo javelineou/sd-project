@@ -20,7 +20,7 @@
 		{
 			echo '<script>
 						alert("Voting successfull!");
-						window.location = "homepage.php";
+						window.location = "thankyou.php";
 					</script>';
 		
 		}
