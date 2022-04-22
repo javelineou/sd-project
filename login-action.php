@@ -29,7 +29,7 @@
 		//$password = $_POST["password"];
 
         //Validate credentials
-           $sql = "SELECT student_id, admin_status from student where student_id='$studentId' and password='$password'";
+           $sql = "SELECT student_id, admin_status, vote_status from student where student_id='$studentId' and password='$password'";
            $result = mysqli_query($conn, $sql);
 
         //Validate credentials using prepared statement
@@ -44,6 +44,7 @@
                 $row = mysqli_fetch_assoc($result);
                 $_SESSION['student_id'] = $row['student_id'];
                 $_SESSION["admin_status"] = $row['admin_status'];
+                $_SESSION["vote_status"] = $row['vote_status'];
                 $_SESSION["loggedin"] = true;
 					
 				
