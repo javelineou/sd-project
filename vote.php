@@ -7,6 +7,11 @@
     header("location: login.php");
     exit;
   }
+
+  // Check if the user has vote or not
+  if($_SESSION["vote_status"] != '0'){
+    header("location: youve-voted.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -101,7 +106,7 @@
            <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="vote.php"
           >
             Vote
           </a>
