@@ -1,17 +1,17 @@
 <?php 
-/* session_start(); */
+session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
-/* if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
   header("location: login.php");
   exit;
-} */
+}
 
 // Check if user is not admin, it'll redirect to logged homepage
-/* if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
   header("location: logged-homepage.php");
   exit;
-} */
+}
 ?>
 
 <!DOCTYPE html>
@@ -100,8 +100,7 @@
 				  </ul>
 				  			
 				   	<a href="admin-homepage.php" type="button"
-            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Logout</a>
-				  
+            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Back</a>
 				</div>
 	  </div>
 	  </nav>
