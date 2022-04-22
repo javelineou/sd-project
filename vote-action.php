@@ -1,25 +1,22 @@
 <?php
-	
     //connect to database
     include ("config.php");
-	
+	 session_start();
+	 
+	 
 	if(isset($_POST['submit']))
 	{
-		$student_id         = $_GET['student_id'];
-		//$name 				= $_SESSION['student_id'];
+		$student_id         = $_SESSION['student_id'];
 		$candidate_id 		= $_POST['candidate_id'];
-		$total_votes 		= $vote_count + 1;
 	
 	
-		//$sql = " UPDATE student SET vote_status = 1 WHERE student_id='$student_id' ";
-		//$result = mysql_query($sql) or die(mysql_error());
-	
-		
+		$sql = " UPDATE student SET vote_status = 1 WHERE student_id='$student_id' ";		
 		$query2 = " UPDATE vote SET vote_count=vote_count + 1 WHERE candidate_id ='$candidate_id' ";
 		
-		$data = mysqli_query($conn, $query2 );
+		$data1 = mysqli_query($conn, $query2 );
+		$data2 = mysqli_query($conn, $sql );
 		
-		if($data)
+		if($data1 && $data2)
 		{
 			echo '<script>
 						alert("Voting successfull!");
