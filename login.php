@@ -88,7 +88,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="vote.html"
+            href="vote.php"
           >
             Vote
         </a>
@@ -150,7 +150,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
                   />
                   <label class="form-label" for="password"></label>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LdXpz4fAAAAAAfubqQ6XHcHDOQdNSrRvrpmkR56"></div>
+                <div class="g-recaptcha" data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL"></div>
 
                 <hr class="my-4" />
 

@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
