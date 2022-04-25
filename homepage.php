@@ -85,7 +85,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="login.php"
           >
             Vote
           </a>
