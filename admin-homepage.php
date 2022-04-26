@@ -239,6 +239,7 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
       >
     </div>
   </footer>
+  <!-- EOF Footer -->
 
 <script>
 let slideIndex = 1;

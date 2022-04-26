@@ -41,10 +41,7 @@
 	
 	<style>
 			
-			body
-			{
-				background: #e1f3ff;
-			}
+			
 			table
 			{
 				background:white;
@@ -56,7 +53,7 @@
 				color:white;
 				outline:none;
 				border-radius:5px;
-				height:22px;
+				height:29px;
 				width:80px;
 				font-weight:bold;
 				cursor:pointer;
@@ -70,6 +67,10 @@
 				left: 0;
 				right: 0;
 				bottom: 0;
+			}
+			th, td
+			{
+				text-align:center;
 			}
 		</style>
 	
@@ -127,16 +128,16 @@
 		?>
 		
 			<h1 style="text-align: center;">Student Records</h1>
-			<table style="width:100%">
-				<th width="10%">Name</th>
-				<th width="5%">Student ID</th>
-				<th width="20%">Faculty</th>
-				<th width="5%%">Year</th>
-				<th width="10%">Password</th>
-				<th width="10%">Level of study</th>
-				<th width="5%">Status</th>
-				<th width="5%">Vote Status</th>
-				<th width="10%">Operations</th>
+			<table class="table table-bordered" style="width:100%">
+				<th >Name</th>
+				<th >Student ID</th>
+				<th >Faculty</th>
+				<th >Year</th>
+				<th >Password</th>
+				<th >Level of study</th>
+				<th >Status</th>
+				<th >Vote Status</th>
+				<th >Operations</th>
 
 			
 			
@@ -166,10 +167,10 @@
 </table>
 
 
-<!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
+  <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->
-    <section class="mb-2 text-center">
+    <section class="mt-4 text-center">
       <a
         class="btn btn-outline-dark btn-floating m-1"
         href="https://www.facebook.com/firstcityUC/"
@@ -198,7 +199,7 @@
       >
     </div>
   </footer>
-<!-- EOF Footer -->
+  <!-- EOF Footer -->
 </html>
 
 <script>

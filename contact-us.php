@@ -1,4 +1,8 @@
 <?php
+  // Include config file to start db
+  include ("config.php");
+  session_start();
+
   if(count($_POST)>0){
     if(empty($_POST['g-recaptcha-response'])){
       echo '<script language="javascript">';
@@ -20,31 +24,7 @@ alert("Submit insuccessful")
 }
 </script>
 
-<?php
-// Include config file to start db
-include ("config.php");
 
-//Get ID from Database
-if(isset($_POST['submit_contact'])){
-    $name=$_POST['Name'];
-	$email=$_POST['Email'];
-	$enquiries=$_POST['Enquiries'];
-    
-	if (empty($name)||empty ($email)||empty ($enquiries))
-	{
-		echo "opps! can't leave any field blank";
-	}
-	else
-	{
-		$sql="INSERT INTO contact(name, email, enquiries) VALUE ('$name', '$email', '$enquiries')";
-		if (mysqli_query($conn, $sql)) {
-        echo "Record updated successfully". $sql;
-        //go to thank you page
-		echo ("<script LANGUAGE='JavaScript'>window.location.href='thankyou.html';</script>");
-		} else { echo "Error deleting record: ".mysqli_error($conn); }
-	}
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -179,6 +159,8 @@ if(isset($_POST['submit_contact'])){
       </div>
       <!-- Right Column -->
       <div class="col-md ms-5">
+      
+      <!--contact us form -->
         <form action="contact-us.php" method="POST">
         <input
           type="text"
@@ -189,7 +171,7 @@ if(isset($_POST['submit_contact'])){
           required
         />
 		<br />
-        <label></label>
+ 
         <input
           type="email"
           id="Email"
@@ -199,11 +181,11 @@ if(isset($_POST['submit_contact'])){
           required
         />
 		<br />
-        <label></label>
+
         <textarea
           class="form-control w-75 mb-4"
           id="Enquiries"
-		  name="Enquiries"
+		  name="Message"
           rows="5"
           placeholder="Leave your message..."
           required
@@ -212,9 +194,10 @@ if(isset($_POST['submit_contact'])){
           class="g-recaptcha"
           data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL">
 		</div>
-        <input class="btn btn-primary shadow-sm my-4" type="submit" name="submit_contact" onClick="confirmation();" value="Submit">
+        <input class="btn btn-primary shadow-sm my-4" type="submit" name="submit" onClick="confirmation();" value="Submit">
         
         </form>
+        <!--EOF contact us form -->
       </div>
     </div>
   </body>
@@ -223,10 +206,10 @@ if(isset($_POST['submit_contact'])){
 </br>
 </br>
 
- <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
+  <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->
-    <section class="mb-2 text-center">
+    <section class="mt-4 text-center">
       <a
         class="btn btn-outline-dark btn-floating m-1"
         href="https://www.facebook.com/firstcityUC/"
@@ -257,3 +240,28 @@ if(isset($_POST['submit_contact'])){
   </footer>
   <!-- EOF Footer -->
 </html>
+
+<?php
+//Get ID from Database
+if(isset($_POST['submit']))
+{
+    $name       =$_POST['Name'];
+	$email      =$_POST['Email'];
+	$message  =$_POST['Message'];
+    
+	
+		$sql="INSERT INTO contact(name, email, message) VALUE ('$name', '$email', '$message')";
+        
+		if (mysqli_query($conn, $sql)) 
+        {
+          echo "Record updated successfully". $sql;
+          //go to thank you page
+          echo ("<script LANGUAGE='JavaScript'>window.location.href='thankyou.php';</script>");
+		} 
+        else 
+        { 
+          echo "<script>alert('message not sent')</script>"; 
+        }
+	
+}
+?>

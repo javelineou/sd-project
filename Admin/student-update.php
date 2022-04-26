@@ -239,10 +239,11 @@
 		</div>	
 	</body>
 	</br></br></br>
+
   <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
+  <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->
-    <section class="mb-2 text-center">
+    <section class="mt-4 text-center">
       <a
         class="btn btn-outline-dark btn-floating m-1"
         href="https://www.facebook.com/firstcityUC/"
