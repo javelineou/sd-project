@@ -45,7 +45,7 @@
 
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_assoc($result);
-                        $_SESSION['student_id'] = $row['student_id'];
+                        $_SESSION["student_id"] = $row['student_id'];
                         $_SESSION["admin_status"] = $row['admin_status'];
                         $_SESSION["vote_status"] = $row['vote_status'];
                         $_SESSION["loggedin"] = true;

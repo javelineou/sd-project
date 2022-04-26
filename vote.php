@@ -9,7 +9,7 @@
   }
 
   // Check if the user has vote or not
-  if(!isset($_SESSION["vote_status"]) || $_SESSION["vote_status"] != '0'){
+  if($_SESSION["vote_status"] != '0'){
     header("location: youve-voted.php");
   }
 ?>
@@ -131,12 +131,12 @@
 
 	
     <h2 class="pagetitle">
-      Vote For 1 Deserved Candidate
+      Vote For One Deserved Candidate
     </h2>
 	<br />
 	
 	<!--Candidate card -->
-	<form action="vote-action2.php" method="POST">
+	<form action="vote-action.php" method="POST">
 	<div class="blog-slider">
 	  <div class="blog-slider__wrp swiper-wrapper">
 

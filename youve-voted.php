@@ -105,6 +105,7 @@
   <body>
     <div class="jumbotron text-center mt-4">
       <h1 class="display-2 fw-bold">You Have Voted!</h1>
+      <p>Thank you for using our service!</p>
       <img
         src="img/ballot.png"
         class="img-fluid"
@@ -115,8 +116,8 @@
       <p>Having trouble? <a href="#">Contact us</a></p>
     </div>
   </body>
+  <br>
 
-<p></br></br></br></p>
    <!-- Footer -->
   <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->

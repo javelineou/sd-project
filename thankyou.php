@@ -82,7 +82,7 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="vote.php"
           >
             Vote
           </a>
@@ -105,6 +105,7 @@
   <body>
     <div class="jumbotron text-center mt-4">
       <h1 class="display-2 fw-bold">Thank You!</h1>
+      <p>Your vote has been recorded</p>
       <img
         src="img/check.png"
         class="img-fluid mb-5"
@@ -114,9 +115,9 @@
       />
       <p>Having trouble? <a href="contact-us.php">Contact us</a></p>
     </div>
+    <br><br>
   </body>
-  
-<p></br></br></br></br></p>
+
   <!-- Footer -->
   <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->

@@ -1,33 +1,78 @@
 <?php
-    //connect to database
     include ("config.php");
-	 session_start();
+	session_start();
 	 
 	 
-	if(isset($_POST['submit']))
+	if(isset($_POST['candidate_A']))
 	{
 		$student_id         = $_SESSION['student_id'];
-		$candidate_id 		= $_POST['candidate_id'];
+		$candidate_id 		= "B1111";
 	
 	
-		$sql = " UPDATE student SET vote_status = 1 WHERE student_id='$student_id' ";		
-		$query2 = " UPDATE vote SET vote_count=vote_count + 1 WHERE candidate_id ='$candidate_id' ";
+		$query1 = " UPDATE student SET vote_status = 1 WHERE student_id='$student_id' ";
+		$query2 = " UPDATE vote SET vote_count = vote_count + 1 WHERE candidate_id ='$candidate_id' ";
 		
-		$data1 = mysqli_query($conn, $query2 );
-		$data2 = mysqli_query($conn, $sql );
+		$data1 = mysqli_query($conn, $query1);
+		$data2 = mysqli_query($conn, $query2);
 		
 		if($data1 && $data2)
 		{
-			echo '<script>
-						alert("Voting successfull!");
-						window.location = "thankyou.php";
-					</script>';
-		
+			$_SESSION["vote_status"] = 1;
+			header("location: thankyou.php");
 		}
 		else
 		{
 			echo '<script>
-                    alert("Voting failed!.. Try again.");
+                    alert("Vote failed! Please try again.");
+                    window.location = "homepage.php";
+                </script>';
+		}
+	}
+
+	else if(isset($_POST['candidate_B'])){
+		$student_id         = $_SESSION['student_id'];
+		$candidate_id 		= "B2222";
+
+		$query1 = " UPDATE student SET vote_status = 1 WHERE student_id='$student_id' ";		
+		$query2 = " UPDATE vote SET vote_count = vote_count + 1 WHERE candidate_id ='$candidate_id' ";
+		
+		$data1 = mysqli_query($conn, $query1);
+		$data2 = mysqli_query($conn, $query2);
+		
+		if($data1 && $data2)
+		{
+			$_SESSION["vote_status"] = 1;
+			header("location: thankyou.php");
+		}
+		else
+		{
+			echo '<script>
+                    alert("Vote failed! Please try again.");
+                    window.location = "homepage.php";
+                </script>';
+		}
+
+	}
+
+	else if(isset($_POST['candidate_C'])){
+		$student_id         = $_SESSION['student_id'];
+		$candidate_id 		= "B3333";
+
+		$query1 = " UPDATE student SET vote_status = 1 WHERE student_id='$student_id' ";		
+		$query2 = " UPDATE vote SET vote_count = vote_count + 1 WHERE candidate_id ='$candidate_id' ";
+		
+		$data1 = mysqli_query($conn, $query1);
+		$data2 = mysqli_query($conn, $query2);
+		
+		if($data1 && $data2)
+		{
+			$_SESSION["vote_status"] = 1;
+			header("location: thankyou.php");
+		}
+		else
+		{
+			echo '<script>
+                    alert("Vote failed! Please try again.");
                     window.location = "homepage.php";
                 </script>';
 		}
