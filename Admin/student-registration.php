@@ -73,8 +73,8 @@
 					</li>
 				  </ul>
 				  			
-				   	<a href="../homepage.php" type="button"
-            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Logout</a>
+				   	<a href="../admin-selection.php" type="button"
+            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Back</a>
 				  
 				</div>
 	  </div>

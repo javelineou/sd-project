@@ -67,7 +67,7 @@
               <a class="nav-link" href="homepage.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about-us.html">About Us</a>
+              <a class="nav-link" href="about-us.php">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact-us.php">Contact Us</a>
@@ -77,17 +77,28 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="vote.php"
           >
             Vote
           </a>
+          <!-- -->
+          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true ){ ?>
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="login.php"
           >
+            Logout
+          </a>
+          <?php } else{ ?>
+            <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="logout.php"
+          >
             Login
           </a>
+          <?php } ?>
         </div>
         <!-- Collapsible wrapper -->
       </div>

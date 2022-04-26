@@ -90,9 +90,9 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="login.php"
+            href="logout.php"
           >
-            Login
+            Logout
           </a>
         </div>
         <!-- Collapsible wrapper -->

@@ -122,17 +122,29 @@ if(isset($_POST['submit_contact'])){
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="#"
+            href="vote.php"
           >
             Vote
           </a>
+          
+          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true ){ ?>
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="login.php"
           >
+            Logout
+          </a>
+          <?php } else{ ?>
+            <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="logout.php"
+          >
             Login
           </a>
+          <?php } ?>
+
         </div>
         <!-- Collapsible wrapper -->
       </div>
@@ -198,7 +210,7 @@ if(isset($_POST['submit_contact'])){
         ></textarea>
         <div
           class="g-recaptcha"
-          data-sitekey="6LdXpz4fAAAAAAfubqQ6XHcHDOQdNSrRvrpmkR56">
+          data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL">
 		</div>
         <input class="btn btn-primary shadow-sm my-4" type="submit" name="submit_contact" onClick="confirmation();" value="Submit">
         

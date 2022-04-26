@@ -2,13 +2,14 @@
 	include("../config.php");
 
 	// Starting session
-	// session_start();
+	session_start();
 
-	// Check if user is whether or not an admin
-	// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
-	// header("location: ../logged-homepage.php");
-	// exit;
-	// }
+	//Check if user is whether or not an admin
+	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+	header("location: ../logged-homepage.php");
+	exit;
+	}
+
 	$student_id = $_GET['student_id'];
 	$query = "SELECT * FROM student where student_id= '$student_id'";
 	$data  = mysqli_query($conn, $query);
@@ -19,9 +20,7 @@
 <!DOCTYPE html>
 
 <html>
-	
-	<head>
-		
+	<head>	
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		

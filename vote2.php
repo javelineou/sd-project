@@ -9,9 +9,9 @@
   }
 
   // Check if the user has vote or not
-  // if($_SESSION["vote_status"] != '0'){
-  //   header("location: youve-voted.php");
-  // }
+  if($_SESSION["vote_status"] != '0'){
+    header("location: youve-voted.php");
+  }
 ?>
 
 <!DOCTYPE html>

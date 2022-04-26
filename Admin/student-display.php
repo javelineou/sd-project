@@ -1,13 +1,13 @@
 <?php
 
 	// Starting session
-	// session_start();
+	session_start();
 
 	// Check if user is whether or not an admin
-	// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
-	// header("location: ../logged-homepage.php");
-	// exit;
-	// }
+	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+	header("location: ../logged-homepage.php");
+	exit;
+	}
 ?>
 
 <html>
@@ -48,6 +48,7 @@
 			table
 			{
 				background:white;
+				border:3px solid black;
 			}
 			.update, .delete
 			{
@@ -110,8 +111,8 @@
 					</li>
 				  </ul>
 				  			
-				   	<a href="../homepage.php" type="button"
-            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Logout</a>
+				   	<a href="../admin-selection.php" type="button"
+            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Back</a>
 				  
 				</div>
 	  </div>
@@ -134,8 +135,8 @@
 	{
 		?>
 		
-			<h1 align="center">Student Records</h1>
-			<center><table border="4" cellspacing="7" width="100%">
+			<h1 style="text-align: center;">Student Records</h1>
+			<table style="width:100%">
 				<th width="10%">Name</th>
 				<th width="5%">Student ID</th>
 				<th width="20%">Faculty</th>
@@ -172,7 +173,7 @@
 	}
 ?>
 </table>
-</center>
+
 
 <!-- Footer -->
   <footer class="bg-light text-center text-lg-start mt-auto">
