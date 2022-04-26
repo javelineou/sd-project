@@ -2,14 +2,14 @@
 	include("config.php");
   session_start();
 
-  // Check if the user is logged in, otherwise redirect to login page
+   // Check if the user is logged in, otherwise redirect to login page
   if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
   }
 
   // Check if the user has vote or not
-  if($_SESSION["vote_status"] != '0'){
+  if(!isset($_SESSION["vote_status"]) || $_SESSION["vote_status"] != '0'){
     header("location: youve-voted.php");
   }
 ?>
@@ -128,47 +128,15 @@
   <!-- Body -->
   <body>
 	</br>
-	<h2 class="pagetitle" style= " color:Blue;">
-      Welcome, <?php echo $_SESSION['student_id']  ?>
-    </h2>
+
 	
     <h2 class="pagetitle">
       Vote For 1 Deserved Candidate
     </h2>
 	<br />
 	
-	<!--Vote form-->
-	<div class="container">
-	<form class="row row-cols-lg-auto g-3 align-items-center" action="vote-action.php" method="POST">
-	
-	  <div class="col-12">
-		<label class="visually-hidden" for="student_id">student ID</label>
-		<div class="input-group">
-		  <input type="text" class="form-control" id="student ID" value="<?php echo $_SESSION['student_id'] ?>" readonly>
-		</div>
-	  </div>
-
-	  <div class="col-12">
-		<label class="visually-hidden" for="candidate_id">Candidate ID</label>
-		<select class="form-select" id="candidate_id" name="candidate_id" required>
-		  <option value="">Choose...</option>
-		  <option value="B1454">Saravanaaguru</option>
-		  <option value="B1745">Tristan</option>
-		  <option value="B1404">Piravindraj</option>
-		</select>
-	  </div>
-
-	  <div class="d-grid gap-2 col-6 mx-auto">
-		<input type="submit" value="Vote" class="btn btn-primary" name="submit">
-	  </div>
-	  
-	</form>
-	</div>
-	
-	<p><br /></p>
-	<!--EOF Vote form-->
-	
 	<!--Candidate card -->
+	<form action="vote-action2.php" method="POST">
 	<div class="blog-slider">
 	  <div class="blog-slider__wrp swiper-wrapper">
 
@@ -180,6 +148,7 @@
 			<span class="blog-slider__code">Bachelors Degree in IT</span>
 			<div class="blog-slider__title">SARAVANAAGURU MANIVANNAN</div>
 			<div class="blog-slider__text">"Somewhere inside all of us is the power to change the world"</div>
+			<input type="submit" value="Vote" class="blog-slider__button" name="candidate_A">
 		  </div>
 		</div>
 		
@@ -191,6 +160,7 @@
 			<span class="blog-slider__code">Bachelors Degree in CS</span>
 			<div class="blog-slider__title">ADRIANUS TRISTAN</div>
 			<div class="blog-slider__text">"what you do has far greater impact than what you say"</div>
+			<input type="submit" value="Vote" class="blog-slider__button" name="candidate_B">
 		  </div>
 		</div>
 		
@@ -203,12 +173,14 @@
 			<span class="blog-slider__code">Bachelors Degree in Data Science</span>
 			<div class="blog-slider__title">PIRAVINDRAJ</div>
 			<div class="blog-slider__text">"A good education is the foundation for better future"</div>
+			<input type="submit" value="Vote" class="blog-slider__button" name="candidate_C">
 		  </div>
 		</div>
 		
 	  </div>
 	  <div class="blog-slider__pagination"></div>
 	</div>
+	</form>
 <!--EOF Candidate card -->
     <p><br /></p>
   </body>

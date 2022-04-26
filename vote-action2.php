@@ -4,7 +4,7 @@
 	 session_start();
 	 
 	 
-	if(isset($_POST['submitA']))
+	if(isset($_POST['candidate_A']))
 	{
 		$student_id         = $_SESSION['student_id'];
 		$candidate_id 		= "B1111";
@@ -32,7 +32,7 @@
 		}
 	}
 
-	else if(isset($_POST['submitB'])){
+	else if(isset($_POST['candidate_B'])){
 		$student_id         = $_SESSION['student_id'];
 		$candidate_id 		= "B2222";
 
@@ -59,7 +59,7 @@
 
 	}
 
-	else if(isset($_POST['submitC'])){
+	else if(isset($_POST['candidate_C'])){
 		$student_id         = $_SESSION['student_id'];
 		$candidate_id 		= "B3333";
 

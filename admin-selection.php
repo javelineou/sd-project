@@ -86,17 +86,9 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
 				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				    <!--homepage link-->
 					<li class="nav-item ">
-					  <a class="nav-link active" aria-current="page" href="#">Home</a>
+					  <a class="nav-link " aria-current="page" href="admin-homepage.php">Home</a>
 					</li>
-					<li class="nav-item dropdown">
-					  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Student
-					  </a>
-					  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="Admin/student-registration.php">Register</a></li>
-						<li><a class="dropdown-item" href="Admin/student-display.php">Edit/Delete</a></li>
-					  </ul>
-					</li>
+					
 				  </ul>
 				  			
 				   	<a href="admin-homepage.php" type="button"

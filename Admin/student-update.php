@@ -72,21 +72,12 @@
 				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				    <!--homepage link-->
 					<li class="nav-item">
-					  <a class="nav-link	" aria-current="page" href="../admin-selection.php">Home</a>
-					</li>
-					<li class="nav-item dropdown">
-					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Student
-					  </a>
-					  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="student-registration.php">Register</a></li>
-						<li><a class="dropdown-item" href="student-display.php">Edit/Delete</a></li>
-					  </ul>
+					  <a class="nav-link	" aria-current="page" href="../admin-homepage.php">Home</a>
 					</li>
 				  </ul>
 				  			
-				   	<a href="../homepage.php" type="button"
-            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Logout</a>
+				   	<a href="student-display.php" type="button"
+            		class="btn btn-outline-primary me-3 shadow-sm btn-width">back</a>
 				  
 				</div>
 	  </div>
