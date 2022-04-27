@@ -29,7 +29,7 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
 		/>
-		<link rel="stylesheet" type="text/css" href="../registration.css" >
+		<link rel="stylesheet" type="text/css" href="registration.css" >
 		<title> Student Registration </title>   
 	</head>
    
