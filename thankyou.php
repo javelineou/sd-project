@@ -72,7 +72,7 @@
               <a class="nav-link" href="homepage.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about-us.html">About Us</a>
+              <a class="nav-link" href="about-us.php">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact-us.php">Contact Us</a>
