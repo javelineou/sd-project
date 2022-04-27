@@ -137,7 +137,7 @@
 	
 	<!--Candidate card -->
 	<form action="vote-action.php" method="POST">
-	<div class="blog-slider">
+	<div class="blog-slider mb-5">
 	  <div class="blog-slider__wrp swiper-wrapper">
 
 		<div class="blog-slider__item swiper-slide">
@@ -182,7 +182,6 @@
 	</div>
 	</form>
 <!--EOF Candidate card -->
-    <p><br /></p>
   </body>
 
   <!-- Footer -->
