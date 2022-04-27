@@ -86,7 +86,7 @@
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="login.php"
+            href="logout.php"
           >
             Logout
           </a>
@@ -94,7 +94,7 @@
             <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="logout.php"
+            href="login.php"
           >
             Login
           </a>

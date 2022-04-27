@@ -92,6 +92,13 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
           </a>
           <a
             type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width-6"
+            href="reset.php"
+          >
+            Reset Password
+          </a>
+          <a
+            type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="logout.php"
           >

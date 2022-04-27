@@ -69,7 +69,7 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 			<!--logo-->
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="admin-selection.php">
 				<img
 				src="img/fcuc-sc.png"
 				width="50"
