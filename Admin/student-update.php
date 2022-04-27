@@ -105,12 +105,12 @@
 				
 				<div class="input_field">
 					<label> Student ID </label>
-					<input type="text" value="<?php echo $result['student_id'];?>" class="input" name="student_id" required>
+					<input type="text" value="<?php echo $result['student_id'];?>" class="input" name="student_id" disabled>
 				</div>
 				
 				<div class="input_field">
 					<label> password </label>
-					<input type="text" value="<?php echo $result['password'];?>" class="input" name="password" required>
+					<input type="text" value="<?php echo $result['password'];?>" class="input" name="password" disabled>
 				</div>
 				
 				<div class="input_field">

@@ -72,6 +72,7 @@
 			{
 				text-align:center;
 			}
+			
 		</style>
 	
 	
@@ -102,7 +103,12 @@
 					  <a class="nav-link	" aria-current="page" href="../admin-homepage.php">Home</a>
 					</li>
 				  </ul>
-				  			
+				  	<form action="vote-status-reset-action.php" method="POST" >
+						<div class="button">
+							<input type="submit" value="reset vote status" class="btn btn-outline-primary me-3 shadow-sm btn-width" name="submit">
+						</div>
+					</form>	
+		
 				   	<a href="../admin-selection.php" type="button"
             		class="btn btn-outline-primary me-3 shadow-sm btn-width">Back</a>
 				  
@@ -165,8 +171,7 @@
 	}
 ?>
 </table>
-
-
+		
   <!-- Footer -->
   <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->
