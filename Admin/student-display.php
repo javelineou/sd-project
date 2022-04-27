@@ -145,14 +145,14 @@
 		while($result = mysqli_fetch_assoc($data))
 		{
 				echo " <tr>
-						<td>".$result[name]."</th>
-						<td>".$result[student_id]."</td>
-						<td>".$result[faculty]."</td>
-						<td>".$result[year]."</td>
-						<td>".$result[password]."</td>
-						<td>".$result[level_of_study]."</td>
-						<td>".$result[admin_status]."</td>
-						<td>".$result[vote_status]."</td>
+						<td>".$result['name']."</th>
+						<td>".$result['student_id']."</td>
+						<td>".$result['faculty']."</td>
+						<td>".$result['year']."</td>
+						<td>".$result['password']."</td>
+						<td>".$result['level_of_study']."</td>
+						<td>".$result['admin_status']."</td>
+						<td>".$result['vote_status']."</td>
 						<td><a href='student-update.php?student_id=$result[student_id]'><input type='submit' value='Update' class='update'></a>
 						<a href='student-delete.php?student_id=$result[student_id]'><input type='submit' value='Delete' class='delete' onclick='return checkdelete()'></a></td>
 					  </tr>
