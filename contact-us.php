@@ -13,15 +13,15 @@
 ?>
 
 <script>
-function confirmation(){
-var answer = confirm('Are you confirm to submit?');
-if(answer){
-form.submit();
-}
-else{
-alert("Submit insuccessful")
-}
-}
+  function confirmation(){
+    var answer = confirm('Are you confirm to submit?');
+    if(answer){
+      form.submit();
+    }
+    else{
+      alert("Submit insuccessful")
+    }
+  }
 </script>
 
 
@@ -107,13 +107,13 @@ alert("Submit insuccessful")
             Vote
           </a>
           
-          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true ){ ?>
+          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){ ?>
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="login.php"
           >
-            Logout
+            Login
           </a>
           <?php } else{ ?>
             <a
@@ -121,7 +121,7 @@ alert("Submit insuccessful")
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="logout.php"
           >
-            Login
+            Logout
           </a>
           <?php } ?>
 
@@ -165,7 +165,7 @@ alert("Submit insuccessful")
         <input
           type="text"
           id="Name"
-		  name="Name"
+		      name="Name"
           class="form-control w-75"
           placeholder="Name"
           required
@@ -175,7 +175,7 @@ alert("Submit insuccessful")
         <input
           type="email"
           id="Email"
-		  name="Email"
+		      name="Email"
           class="form-control w-75"
           placeholder="Email"
           required
@@ -185,7 +185,7 @@ alert("Submit insuccessful")
         <textarea
           class="form-control w-75 mb-4"
           id="Enquiries"
-		  name="Message"
+		      name="Message"
           rows="5"
           placeholder="Leave your message..."
           required
@@ -245,9 +245,9 @@ alert("Submit insuccessful")
 //Get ID from Database
 if(isset($_POST['submit']))
 {
-    $name       =$_POST['Name'];
-	$email      =$_POST['Email'];
-	$message  =$_POST['Message'];
+  $name       = $_POST['Name'];
+	$email      = $_POST['Email'];
+	$message  = $_POST['Message'];
     
 	
 		$sql="INSERT INTO contact(name, email, message) VALUE ('$name', '$email', '$message')";
@@ -260,7 +260,7 @@ if(isset($_POST['submit']))
 		} 
         else 
         { 
-          echo "<script>alert('message not sent')</script>"; 
+          echo "<script>alert('Failed to send message.')</script>"; 
         }
 	
 }
