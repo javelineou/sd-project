@@ -2,14 +2,13 @@
 	include("../config.php");
 
 	// Starting session
-	session_start();
+	// session_start();
 
-	//Check if user is whether or not an admin
-	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
-	header("location: ../logged-homepage.php");
-	exit;
-	}
-
+	// Check if user is whether or not an admin
+	// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
+	// header("location: ../logged-homepage.php");
+	// exit;
+	// }
 	$student_id = $_GET['student_id'];
 	$query = "SELECT * FROM student where student_id= '$student_id'";
 	$data  = mysqli_query($conn, $query);
@@ -20,7 +19,9 @@
 <!DOCTYPE html>
 
 <html>
-	<head>	
+	
+	<head>
+		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -86,7 +87,6 @@
 	</header>
   <!--EOF Navigation bar-->
   
-  
 	
 	<body>
 		<div class="container"> 
@@ -105,12 +105,12 @@
 				
 				<div class="input_field">
 					<label> Student ID </label>
-					<input type="text" value="<?php echo $result['student_id'];?>" class="input" name="student_id" disabled>
+					<input type="text" value="<?php echo $result['student_id'];?>" class="input" name="student_id" required>
 				</div>
 				
 				<div class="input_field">
 					<label> password </label>
-					<input type="text" value="<?php echo $result['password'];?>" class="input" name="password" disabled>
+					<input type="text" value="<?php echo $result['password'];?>" class="input" name="password" required>
 				</div>
 				
 				<div class="input_field">
@@ -239,11 +239,10 @@
 		</div>	
 	</body>
 	</br></br></br>
-
   <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start pt-2">
+  <footer class="bg-light text-center text-lg-start mt-auto">
     <!-- Section Social media -->
-    <section class="mt-4 text-center">
+    <section class="mb-2 text-center">
       <a
         class="btn btn-outline-dark btn-floating m-1"
         href="https://www.facebook.com/firstcityUC/"
