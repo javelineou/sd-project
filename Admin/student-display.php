@@ -100,12 +100,12 @@
 				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				    <!--homepage link-->
 					<li class="nav-item">
-					  <a class="nav-link	" aria-current="page" href="../admin-homepage.php">Home</a>
+					  <a class="nav-link" aria-current="page" href="../admin-homepage.php">Home</a>
 					</li>
 				  </ul>
 				  	<form action="vote-status-reset-action.php" method="POST" >
 						<div class="button">
-							<input type="submit" value="reset vote status" class="btn btn-outline-primary me-3 shadow-sm btn-width" name="submit">
+							<input type="submit" value="Reset Vote Status" class="btn btn-outline-primary me-3 shadow-sm btn-width" name="submit">
 						</div>
 					</form>	
 		

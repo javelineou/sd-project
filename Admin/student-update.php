@@ -78,7 +78,7 @@
 				  </ul>
 				  			
 				   	<a href="student-display.php" type="button"
-            		class="btn btn-outline-primary me-3 shadow-sm btn-width">back</a>
+            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Back</a>
 				  
 				</div>
 	  </div>
@@ -109,14 +109,14 @@
 				</div>
 				
 				<div class="input_field">
-					<label> password </label>
+					<label> Password </label>
 					<input type="text" value="<?php echo $result['password'];?>" class="input" name="password" required>
 				</div>
 				
 				<div class="input_field">
 					<label> Level </label>
 					<select class="selectbox" name="level_of_study" required>
-						<option value=""> - select - </option>
+						<option value=""> - Select - </option>
 						<option value="Foundation"
 						
 						<?php
@@ -240,9 +240,9 @@
 	</body>
 	</br></br></br>
   <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-auto">
+  <footer class="bg-light text-center text-lg-start pt-2">
     <!-- Section Social media -->
-    <section class="mb-2 text-center">
+    <section class="mt-4 text-center">
       <a
         class="btn btn-outline-dark btn-floating m-1"
         href="https://www.facebook.com/firstcityUC/"
@@ -282,7 +282,7 @@
 	{
 		$name 				= $_POST['name'];
 		$student_id 		= $_POST['student_id'];
-		$password 			= $_POST['password'];
+		$password 			= md5($_POST['password']);
 		$level_of_study 	= $_POST['level_of_study'];
 		$faculty 			= $_POST['faculty'];
 		$year 				= $_POST['year'];

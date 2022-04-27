@@ -75,7 +75,7 @@
 	</header>
   <!--EOF Navigation bar-->
 	<body>
-		<div class="container"> 
+		<div class="container mb-5"> 
 		<form action="#" method="POST" >
 			<div class="title">
 				Registration Form
@@ -99,7 +99,7 @@
 				<div class="input_field">
 					<label> Level </label>
 					<select class="selectbox" name="level_of_study" required>
-						<option value=""> - select - </option>
+						<option value=""> - Select - </option>
 						<option value="Foundation"> Foundation </option>
 						<option value="Diploma">Diploma</option>
 						<option value="Degree"> Degree</option>

@@ -28,7 +28,7 @@
 		
 		if($data2)
 		{
-			echo "<script>alert('vote status reset successful')</script>";
+			echo "<script>alert('Success!')</script>";
 			
 			?>
 		
