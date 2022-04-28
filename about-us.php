@@ -1,7 +1,3 @@
-<?php
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -85,14 +81,14 @@
           >
             Vote
           </a>
-          
-          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){ ?>
+          <!-- -->
+          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true ){ ?>
           <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="logout.php"
           >
-            Login
+            Logout
           </a>
           <?php } else{ ?>
             <a
@@ -100,7 +96,7 @@
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="login.php"
           >
-            Logout
+            Login
           </a>
           <?php } ?>
         </div>

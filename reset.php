@@ -3,6 +3,14 @@
 
 	//Starting session
 	session_start();
+
+	// Check if the user is logged in, otherwise redirect to login page
+	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+	}
+
+	$student_id = $_SESSION["student_id"];
 ?>
 
 <!DOCTYPE html>
@@ -33,108 +41,99 @@
 		<title> Student Registration </title>   
 	</head>
    
-<!--Navigation bar-->
- 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<!--logo-->
-			<a class="navbar-brand" href="../admin-selection.php">
-				<img
-				src="../img/fcuc-sc.png"
-				width="50"
-				height="50"
-				alt="FCUC Student Council Logo"
-				 />
-		  	</a>
-			<!--burger menu-->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-					  	<a class="nav-link	" aria-current="page" href="../admin-homepage.php">Home</a>
-					</li>
-					
-				  </ul>
-				  			
-				   	<a href="../admin-selection.php" type="button"
-            		class="btn btn-outline-primary me-3 shadow-sm btn-width">Back</a>
-				  
-				</div>
-	  </div>
-	  </nav>
-	
-	</header>
+<!-- Header -->
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
+          <img
+            src="img/fcuc-sc.png"
+            width="50"
+            height="50"
+            alt="FCUC Student Council Logo"
+          />
+        </a>
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="homepage.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.php">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.php">Contact Us</a>
+            </li>
+          </ul>
+          <!-- Button on Navbar -->
+          <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="vote.php"
+          >
+            Vote
+          </a>
+          <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="logout.php"
+          >
+            Logout
+          </a>
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+  </header>
   <!--EOF Navigation bar-->
 	<body>
 		<div class="container"> 
 		<form action="#" method="POST" >
 			<div class="title">
-				Registration Form
+				Reset Password
 			</div>
 			<div class="form">
-				<div class="input_field">
-					<label>  Name </label>
-					<input type="text" class="input" name="name" required>
-				</div>
 				
 				<div class="input_field">
 					<label> Student ID </label>
-					<input type="text" class="input" name="student_id" required>
+					<input type="text" value="<?php echo $student_id;?>" class="input" name="student_id" readonly>
 				</div>
 				
 				<div class="input_field">
-					<label> Password </label>
-					<input type="password" class="input" name="password" required>
+					<label> Current Password </label>
+					<input type="password" class="input" name="currentPassword" required>
+				</div>
+
+				<div class="input_field">
+					<label> New Password </label>
+					<input type="password" class="input" name="newPassword" required>
+				</div>
+
+				<div class="input_field">
+					<label> Retype New Password </label>
+					<input type="password" class="input" name="reNewPassword" required>
 				</div>
 				
 				<div class="input_field">
-					<label> Level </label>
-					<select class="selectbox" name="level_of_study" required>
-						<option value=""> - select - </option>
-						<option value="Foundation"> Foundation </option>
-						<option value="Diploma">Diploma</option>
-						<option value="Degree"> Degree</option>
-						<option value="Masters">Masters</option>
-					</select>
-				</div>
-				
-				<div class="input_field">
-					<label> Faculty </label>
-					<select class="selectbox" name="faculty" required>
-						<option value=""> - Select - </option>
-						<option value="Faculty of Engineering and Computing"> Faculty of Engineering and Computing</option>
-						<option value="Faculty of Arts"> Faculty of Arts</option>
-						<option value="Faculty of Business"> Faculty of Business</option>
-					</select>
-				</div>
-				
-				<div class="input_field">
-					<label> Year </label>
-					<select class="selectbox" name="year" required>
-						<option value=""> - Select - </option>
-						<option value="1"> 1 </option>
-						<option value="2"> 2 </option>
-						<option value="3"> 3 </option>
-					</select>
-				</div>
-				<div class="input_field">
-					<label> Status </label>
-					<select class="selectbox" name="admin_status">
-						<option value="0"> - Default - </option>
-					</select>
-				</div>
-				<div class="input_field">
-					<label> Vote Status </label>
-					<select class="selectbox" name="vote_status">
-						<option value="0"> - Default - </option>
-					</select>
-				</div>
-				
-				<div class="input_field">
-					<input type="submit" value="Register" class="btn" name="submit">
+					<input type="submit" value="Submit" class="btn" name="submit">
 				</div>
 			</div>
 		</form>	
