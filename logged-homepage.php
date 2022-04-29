@@ -154,7 +154,7 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
           The law does not require citizens to vote, but voting is a very
           important part of any democracy. By voting, citizens are participating
           in the democratic process. Citizens vote for leaders to represent them
-          and their ideas, and the leaders support the citizens' interests.
+          and their ideas, and the leaders support the citizens interests.
         </p>
       </div>
       <div class="votehere">
@@ -208,6 +208,23 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
 </div>
 
 <p><br /><br /><br /></p>
+
+<div class = "timercontainer">
+<h4 class = "pagetitle"> CHECK OUT THE WINNER OF THE ELECTION HERE</h4>
+	<div id = "countdown" style = "text-align: center;">
+		<ul>
+			<li><span id = "days"></span>Days</li>
+			<li><span id = "hours"></span>Hours</li>
+			<li><span id = "minutes"></span>Minutes</li>
+			<li><span id = "seconds"></span>Seconds</li>
+		</ul>
+	</div>
+	
+	<div id = "winnerlink" class="winnerlinkcontainer">
+      <a href="winner.php" class="btn">CLICK HERE TO VIEW THE WINNER</a>
+    </div>
+</div>
+
   </body>
 
   <!-- Footer -->
@@ -286,4 +303,49 @@ function showSlides(n){
 
 
 </script>
+
+
+<script>
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yy = today.getFullYear(),
+      nextYear = yy + 1,
+      dayMonth = "05/11/",
+      winner = dayMonth + yy;
+  
+  today = mm + "/" + dd + "/" + yy;
+  if (today > winner) {
+    winner = dayMonth + nextYear;
+  }
+  
+  const countDown = new Date(winner).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("countdown").style.display = "none";
+		   document.getElementById("winnerlink").style.display = "block";
+		  
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+</script>
+
 </html>
