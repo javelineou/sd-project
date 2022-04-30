@@ -210,18 +210,18 @@
 		
 		    if($data){
 			    echo "<script>alert('Password has been changed')</script>";
-          header("location: homepage.php");
+          header("Location:homepage.php");
 		    }
 		    else{
-			  echo "Password changing unsuccessful";
+			  echo "<script>alert('Password changing unsuccessful')</script>";
 		    }
       }
       else{
-        echo "New password and retype new password is incorrect";
+        echo "<script>alert('New password and retype new password is incorrect')</script>";
       }
     }
     else{//current password is not same as password in database
-      echo "Your current password is incorrect";
+      echo "<script>alert('Your current password is incorrect')</script>";
     }
     
 	}
