@@ -11,6 +11,9 @@
 	}
 
 	$student_id = $_SESSION["student_id"];
+	$query = "SELECT * FROM student where student_id= '$student_id'";
+	$data  = mysqli_query($conn, $query);
+	$result = mysqli_fetch_assoc($data);
 ?>
 
 <!DOCTYPE html>
@@ -111,10 +114,18 @@
 				Reset Password
 			</div>
 			<div class="form">
-				
+
 				<div class="input_field">
-					<label> Student ID </label>
-					<input type="text" value="<?php echo $student_id;?>" class="input" name="student_id" readonly>
+					<label> Student ID</label>
+          <!-- <?php echo $student_id;?> -->
+
+          <p class="studentID" style="width:200px;font-size:20px;font-weight:bold;">
+          <?php echo $student_id;?>
+          </p>
+
+          <!--
+					<input type="text" value="<?php echo $student_id;?>" class="studentid" name="student_id" readonly>
+					-->
 				</div>
 				
 				<div class="input_field">
@@ -179,29 +190,40 @@
 	
 	if(isset($_POST['submit']))
 	{
-		$name 				= $_POST['name'];
-		$student_id 		= $_POST['student_id'];
-		//$password 			= $_POST['password'];
-		$password 			= md5($_POST['password']);
-		$level_of_study 	= $_POST['level_of_study'];
-		$faculty 			= $_POST['faculty'];
-		$year 				= $_POST['year'];
-		$admin_status		= $_POST['admin_status'];
-		$vote_status		= $_POST['vote_status'];
-	
-	
-		$query = "INSERT INTO student VALUES('$name', '$student_id', '$faculty', '$year', '$password', '$level_of_study', '$admin_status', '$vote_status')";
+		$dbPassword = $result['password'];
+    
+    $student_id = $_SESSION['student_id'];
+
+    //$currentPassword 	= $_POST['currentPassword'];
+    $currentPassword 	= md5($_POST['currentPassword']);
+
+		//$newPassword 	= $_POST['newPassword'];
+    $newPassword 	= md5($_POST['newPassword']);
+
+    //$reNewPassword 	= $_POST['reNewPassword'];
+    $reNewPassword 	= md5($_POST['reNewPassword']);
+
+    if($dbPassword === $currentPassword){//check the current password is same as the password in database
+      if($newPassword === $reNewPassword){//check the new password and retype new password
+        $query = "UPDATE student set password='$newPassword' WHERE student_id='$student_id'";
+		    $data = mysqli_query($conn, $query);
 		
-		$data = mysqli_query($conn, $query);
-		
-		if($data)
-		{
-			echo "<script>alert('Data inserted successfuly')</script>";
-		}
-		else
-		{
-			echo "Data inserted unsuccessful";
-		}
+		    if($data){
+			    echo "<script>alert('Password has been changed')</script>";
+          header("location: homepage.php");
+		    }
+		    else{
+			  echo "Password changing unsuccessful";
+		    }
+      }
+      else{
+        echo "New password and retype new password is incorrect";
+      }
+    }
+    else{//current password is not same as password in database
+      echo "Your current password is incorrect";
+    }
+    
 	}
 ?>
 
