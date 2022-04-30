@@ -117,20 +117,12 @@
 
 				<div class="input_field">
 					<label> Student ID</label>
-          <!-- <?php echo $student_id;?> -->
-
-          <p class="studentID" style="width:200px;font-size:20px;font-weight:bold;">
-          <?php echo $student_id;?>
-          </p>
-
-          <!--
-					<input type="text" value="<?php echo $student_id;?>" class="studentid" name="student_id" readonly>
-					-->
+					<input class="input" style="width:200px;font-size:20px;font-weight:bold;" value= " <?php echo $student_id;?>" disabled>
 				</div>
 				
 				<div class="input_field">
 					<label> Current Password </label>
-					<input type="password" class="input" name="currentPassword" required>
+					<input type="password" class="input" name="currentPassword" >
 				</div>
 
 				<div class="input_field">
@@ -210,7 +202,10 @@
 		
 		    if($data){
 			    echo "<script>alert('Password has been changed')</script>";
-          header("Location:homepage.php");
+				
+				?>
+				<meta http-equiv = "refresh" content="0; url=http://localhost/sd-project/homepage.php" />
+				<?php
 		    }
 		    else{
 			  echo "<script>alert('Password changing unsuccessful')</script>";
