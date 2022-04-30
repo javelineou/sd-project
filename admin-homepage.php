@@ -207,7 +207,7 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
 <p><br /><br /><br /></p>
 
 <div class = "timercontainer">
-<h4 class = "pagetitle"> CHECK OUT THE WINNER OF THE ELECTION HERE</h4>
+<h4 class = "pagetitle" id="title"> CHECK OUT THE WINNER OF THE ELECTION HERE</h4>
 	<div id = "countdown" style = "text-align: center;">
 		<ul>
 			<li><span id = "days"></span>Days</li>
@@ -316,7 +316,7 @@ function showSlides(n){
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yy = today.getFullYear(),
       nextYear = yy + 1,
-      dayMonth = "05/11/",
+      dayMonth = "05/12/",
       winner = dayMonth + yy;
   
   today = mm + "/" + dd + "/" + yy;
@@ -337,7 +337,8 @@ function showSlides(n){
 
         //do something later when date is reached
         if (distance < 0) {
-	
+			
+		 document.getElementById("title").style.display = "none";
          document.getElementById("countdown").style.display = "none";
 		 document.getElementById("winnerlink").style.display = "block";
 		  

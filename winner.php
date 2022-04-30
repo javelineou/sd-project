@@ -107,66 +107,35 @@
 
 <!-- Body -->
 <body style="background-color: #e1f3ff; overflow-x: hidden;">
-    <div class="text-center mt-4">
-      <h1 class="display-4 fw-bold">FCUC Student Council Election Result</h1>
-      <img
-        src="img/unknown.png"
-        class="img-fluid my-5"
-        width="300"
-        height="175"
-        alt="Winner"
-      />
-      <h1 class="display-6">Countdown</h1>
-      <div id="countdown" class="countdown">
-        <div class="row justify-content-center mt-1 mb-5">
-            <div class="col-1">
-                <h2 id="days"></h2>
-                <small>Days</small>
-            </div>
-        
-            <div class="col-1">
-                <h2 id="hours"></h2>
-                <small>Hours</small>
-            </div>
-        
-            <div class="col-1">
-                <h2 id="minutes"></h2>
-                <small>Minutes</small>
-            </div>
-        
-            <div class="col-1">
-                <h2 id="seconds"></h2>
-                <small>Seconds</small>
-            </div>
-        </div>
-          <!-- Countdown script -->
-          <script>
-            const days = document.getElementById("days");
-            const hours = document.getElementById("hours");
-            const minutes = document.getElementById("minutes");
-            const seconds = document.getElementById("seconds");
-
-            const electionTime = new Date(`May 11 2022 16:00:00`);
-
-            // Update countdown time
-            function updateCountdown() {
-              const currentTime = new Date();
-              const diff = electionTime - currentTime;
-
-              const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-              const h = Math.floor(diff / 1000 / 60 / 60) % 24;
-              const m = Math.floor(diff / 1000 / 60) % 60;
-              const s = Math.floor(diff / 1000) % 60;
-
-              days.innerHTML = d;
-              hours.innerHTML = h < 10 ? "0" + h : h;
-              minutes.innerHTML = m < 10 ? "0" + m : m;
-              seconds.innerHTML = s < 10 ? "0" + s : s;
-            }
-
-            setInterval(updateCountdown, 1000);
-          </script>
-    </div>
+    
+	<h1 style = "text-align: center">FCUC ELECTION RESULTS</h1>
+	<h3 style = "text-align: center">Congratulations to the Winners!<br/><br/></h3>
+	
+	<div class = "wpcontainer">
+		<div class = "wbox">
+			<div class = "imgbox">
+				<img src = "img/unknown.png" alt = "Winner First Place">
+			</div>
+			
+			<div class = "content">
+				<h2>1st Place Winner<br />
+				<span>STUDENT COUNCIL PRESIDENT</span></h2>
+			</div>
+		</div>
+		
+		<div class = "wbox">
+			<div class = "imgbox">
+				<img src = "img/unknown.png" alt = "Winner Second Place">
+			</div>
+			
+			<div class = "content">
+				<h2>2st Place Winner<br />
+				<span>STUDENT COUNCIL VICE PRESIDENT</span></h2>
+			</div>
+		</div>
+	</div>
+	
+	
 </body>
 
 <p></br></br></br></p>
