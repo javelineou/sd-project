@@ -118,19 +118,8 @@
 			</div>
 			
 			<div class = "content">
-				<h2>1st Place Winner<br />
+				<h2>NAME<br />
 				<span>STUDENT COUNCIL PRESIDENT</span></h2>
-			</div>
-		</div>
-		
-		<div class = "wbox">
-			<div class = "imgbox">
-				<img src = "img/unknown.png" alt = "Winner Second Place">
-			</div>
-			
-			<div class = "content">
-				<h2>2st Place Winner<br />
-				<span>STUDENT COUNCIL VICE PRESIDENT</span></h2>
 			</div>
 		</div>
 	</div>
