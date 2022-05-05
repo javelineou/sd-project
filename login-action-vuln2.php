@@ -9,21 +9,6 @@
     // Processing form data when form is submitted
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         
-        //Check if captcha is filled or not
-        if(empty($_POST['g-recaptcha-response'])){
-            ?>
-            <script type="text/javascript">
-            alert("Please solve the captcha!");
-            window.location.href = "login.php";
-            </script>
-            <?php
-        }
-        else{
-            $secretKey = "6LfuT50fAAAAALg2I-F_8f7B3i4BbrLpJ5gTVNGo";
-            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secretKey . '&response=' . $_POST['g-recaptcha-response']);
-            $responseData = json_decode($verifyResponse);
-
-            if ($responseData->success){
                 $studentId = $_POST["studentId"];
                 $password = md5($_POST["password"]); //Password input converted into md5
 
@@ -55,6 +40,4 @@
                     <?php
                     }
             }
-        } 
-    }
 ?>

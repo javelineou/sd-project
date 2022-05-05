@@ -124,6 +124,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
             >
               <form class="card-body p-5 text-center" action="login-action.php" method="POST">
               <!-- <form class="card-body p-5 text-center" action="login-action-vuln.php" method="POST"> -->
+              <!-- <form class="card-body p-5 text-center" action="login-action-vuln2.php" method="POST"> -->
                 <h3 class="mb-5">Login</h3>
 				
 				        <h6>Student ID</h6>
@@ -151,7 +152,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
                   />
                   <label class="form-label" for="password"></label>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL"></div>
+                <!-- <div class="g-recaptcha" data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL"></div> -->
 
                 <hr class="my-4" />
 
