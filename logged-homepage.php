@@ -40,6 +40,18 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
+  
+  <style>
+	
+	.img2
+	{
+		height:300px;
+	}
+	h2
+	{
+		text-align:center;
+	}
+  </style>
 
   <!-- Header -->
   <header>
@@ -175,33 +187,33 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] == '1'){
 <div class = "row">
 	<div class = "column">
 		<div class = "card">
-			<img src = "img/Candidate1.jpg" alt = "Candidate 1" style = "width:100%">
+			<img src = "img/Candidate1.jpg" alt = "Candidate 1" style = "width:100%" class ="img2" >
 			<div class = "container">
-				<h2>Edward Santos</h2>
-				<p class= "title">ARTS & DESIGN - YEAR 2</p>
-				<p> "Your Education, Your Life, Your School, Our Time Is Now. Vote for Edward Santos, your voice!"</p>
+				<h2>Davinia</h2>
+				<p class= "title text-center">ARTS & DESIGN - YEAR 2</p>
+				<p class= "text-center"> "Your Education, Your Life, Your School, Our Time Is Now. Vote for Edward Santos, your voice!"</p>
 			</div>
 		</div>
 	</div>
 	
 	<div class = "column">
 		<div class = "card">
-			<img src = "img/Candidate2.jpg" alt = "Candidate 2" style = "width:100%">
+			<img src = "img/Candidate2.jpg" alt = "Candidate 2" style = "width:100%" class ="img2" >
 			<div class = "container">
-				<h2>Melissa Carlos</h2>
-				<p class= "title">BCSIS - YEAR 1</p>
-				<p> "You’ve seen the best now choose the best, vote for me, Melissa Carlos."</p>
+				<h2>Ho Wei Zheng</h2>
+				<p class= "title text-center">BCSIS - YEAR 1</p>
+				<p class= "text-center" > "You’ve seen the best now choose the best, vote for me, Melissa Carlos."</p>
 			</div>
 		</div>
 	</div>
 	
 	<div class = "column">
 		<div class = "card">
-			<img src = "img/Candidate3.jpg" alt = "Candidate 3" style = "width:100%">
+			<img src = "img/Candidate3.jpg" alt = "Candidate 3" style = "width:100%" class ="img2">
 			<div class = "container">
-				<h2>Alyssa Carly</h2>
-				<p class= "title">BITNS - YEAR 3</p>
-				<p>  "Vote 4 Alyssa. I promise I’ll do my best I’ll never stop to take a rest."</p>
+				<h2>Amirul</h2>
+				<p class= "title text-center">BITNS - YEAR 3</p>
+				<p class= "text-center" >  "Vote 4 Alyssa. I promise I’ll do my best I’ll never stop to take a rest."</p>
 			</div>
 		</div>
 	</div>

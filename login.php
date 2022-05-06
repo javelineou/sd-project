@@ -152,7 +152,7 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
                   />
                   <label class="form-label" for="password"></label>
                 </div>
-                <!-- <div class="g-recaptcha" data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL"></div> -->
+				<div class="g-recaptcha" data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL"></div> 
 
                 <hr class="my-4" />
 

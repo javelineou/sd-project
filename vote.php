@@ -47,19 +47,14 @@
   </head>
 
 	<style>
-		.container
+		.img2
 			{
-				max-width:500px;
-				width:100%;
-				background-color:white;
-				margin:20px auto;
-				padding:30px;
-				box-shadow:5px 5px 5px rgba(0, 0, 0, 0.5);
+				height:300px;
 			}
-		.container .form
-			{
-				width: 100%;
-			}
+		h2
+		{
+			text-align:center;
+		}
 	</style>
   <!-- Header -->
   <header>
@@ -137,50 +132,54 @@
 	
 	<!--Candidate card -->
 	<form action="vote-action.php" method="POST">
-	<div class="blog-slider mb-5">
-	  <div class="blog-slider__wrp swiper-wrapper">
-
-		<div class="blog-slider__item swiper-slide">
-		  <div class="blog-slider__img">
-			<img src="img/guru.jpg" alt="">
-		  </div>
-		  <div class="blog-slider__content">
-			<span class="blog-slider__code">Bachelors Degree in IT</span>
-			<div class="blog-slider__title">SARAVANAAGURU MANIVANNAN</div>
-			<div class="blog-slider__text">"Somewhere inside all of us is the power to change the world"</div>
-			<input type="submit" value="Vote" class="blog-slider__button" name="candidate_A">
-		  </div>
+	<div class = "row">
+		<div class = "column">
+			<div class = "card">
+				<img src = "img/Candidate1.jpg" alt = "Candidate 1" style = "width:100%" class="img2" >
+				<div class = "container">
+					<h2>Davinia</h2>
+					<p class= "title text-center">ARTS & DESIGN - YEAR 2</p>
+					<p class= "text-center" > "Your Education, Your Life, Your School, Our Time Is Now. Vote for Edward Santos, your voice!"</p>
+					 <div class="d-grid gap-2">
+						<input type="submit" value="Vote" class="btn btn-primary" name="candidate_A">
+					 </div>
+					 <p></br></p>
+				</div>
+			</div>
 		</div>
-		
-		<div class="blog-slider__item swiper-slide">
-		  <div class="blog-slider__img">
-			<img src="img/tristan.jpg" alt="">
-		  </div>
-		  <div class="blog-slider__content">
-			<span class="blog-slider__code">Bachelors Degree in CS</span>
-			<div class="blog-slider__title">ADRIANUS TRISTAN</div>
-			<div class="blog-slider__text">"what you do has far greater impact than what you say"</div>
-			<input type="submit" value="Vote" class="blog-slider__button" name="candidate_B">
-		  </div>
+	
+		<div class = "column">
+			<div class = "card">
+				<img src = "img/Candidate2.jpg" alt = "Candidate 2" style = "width:100%" class="img2" >
+				<div class = "container">
+					<h2>Ho Wei Zheng</h2>
+					<p class= "title text-center">BCSIS - YEAR 1</p>
+					<p class= "text-center" > "You’ve seen the best now choose the best, vote for me, Melissa Carlos."</p>
+					<div class="d-grid gap-2">
+						<input type="submit" value="Vote" class="btn btn-primary" name="candidate_B">
+					</div>
+					<p></br></p>
+				</div>
+			</div>
 		</div>
-		
-		<div class="blog-slider__item swiper-slide">
-		  <div class="blog-slider__img">
-			<img src="img/raj.jpg" alt="">
-		  </div>
-		  
-		  <div class="blog-slider__content">
-			<span class="blog-slider__code">Bachelors Degree in Data Science</span>
-			<div class="blog-slider__title">PIRAVINDRAJ</div>
-			<div class="blog-slider__text">"A good education is the foundation for better future"</div>
-			<input type="submit" value="Vote" class="blog-slider__button" name="candidate_C">
-		  </div>
+	
+		<div class = "column">
+			<div class = "card">
+				<img src = "img/Candidate3.jpg" alt = "Candidate 3" style = "width:100%" class="img2" >
+				<div class = "container">
+					<h2>Amirul</h2>
+					<p class= "title text-center" >BITNS - YEAR 3</p>
+					<p class= "text-center" >  "Vote 4 Alyssa. I promise I’ll do my best I’ll never stop to take a rest."</p>
+					<div class="d-grid gap-2">
+					  <input type="submit" value="Vote" class="btn btn-primary" name="candidate_C">
+					</div>
+					<p></br></p>
+				</div>
+			</div>
 		</div>
-		
-	  </div>
-	  <div class="blog-slider__pagination"></div>
 	</div>
 	</form>
+
 <!--EOF Candidate card -->
   </body>
 
@@ -220,19 +219,5 @@
   
 </html>
 
-<script>
-	var swiper = new Swiper('.blog-slider', {
-      spaceBetween: 30,
-      effect: 'fade',
-      loop: true,
-      mousewheel: {
-        invert: false,
-      },
-      // autoHeight: true,
-      pagination: {
-        el: '.blog-slider__pagination',
-        clickable: true,
-      }
-    });
-</script>
+
 

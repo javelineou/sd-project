@@ -1,3 +1,18 @@
+
+<?php
+  // Include config file to start db
+  session_start();
+
+  if(count($_POST)>0){
+    if(empty($_POST['g-recaptcha-response'])){
+      echo '<script language="javascript">';
+      echo 'alert("Please solve reCaptcha!")';
+      echo '</script>';
+    }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -82,21 +97,21 @@
             Vote
           </a>
           <!-- -->
-          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true ){ ?>
+          <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){ ?>
           <a
-            type="button"
-            class="btn btn-outline-primary me-3 shadow-sm btn-width"
-            href="logout.php"
-          >
-            Logout
-          </a>
-          <?php } else{ ?>
-            <a
             type="button"
             class="btn btn-outline-primary me-3 shadow-sm btn-width"
             href="login.php"
           >
             Login
+          </a>
+          <?php } else{ ?>
+            <a
+            type="button"
+            class="btn btn-outline-primary me-3 shadow-sm btn-width"
+            href="logout.php"
+          >
+            Logout
           </a>
           <?php } ?>
         </div>
