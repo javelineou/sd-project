@@ -428,13 +428,13 @@ li span{
 }
 .team-section88 .team-items88 .item88{
  flex-basis: calc(25% - 30px);
- max-width: calc(25% - 30px);
+ max-width: calc(30% - 15px);
  transition: all .5s ease;
  margin-bottom: 40px;
 }
 .team-section88 .team-items88 .item88 img{
 	display: block;
-	width: 100%;
+	width: 110%;
 	border-radius: 8px;
 	height: 450px;
 }

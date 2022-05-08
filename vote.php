@@ -66,8 +66,8 @@
         <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
           <img
             src="img/fcuc-sc.png"
-            width="50"
-            height="50"
+            width="140px"
+            height="55"
             alt="FCUC Student Council Logo"
           />
         </a>

@@ -57,8 +57,8 @@
         <a class="navbar-brand mt-2 mt-lg-0" href="homepage.php">
           <img
             src="img/fcuc-sc.png"
-            width="50"
-            height="50"
+            width="140px"
+            height="55"
             alt="FCUC Student Council Logo"
           />
         </a>
@@ -128,7 +128,8 @@
       <div class="container88">
         <div class="row88">
           <div class="section-title88">
-            <h1>Our Team</h1>
+            <h1 style = "text-align:center;">Our Team</h1>
+			<p></br> </p>
             <p>
               The four developers of this website are; Saravanaaguru,
               Piravindraj, Adrianus Tristan and Leong Min Yi, of the BITNS
@@ -136,7 +137,8 @@
               voting website for the Software Development Project that is
               currently being held at First City University College in the
               February 2022 semester.
-            </p>
+            <p></br> </p>
+			<p>
           </div>
         </div>
         <div class="row88">
@@ -148,21 +150,21 @@
                   <h5>Saravanaaguru</h5>
                   <p>Project Manager</p>
                   <div class="social-links88">
-                    <a href="https://www.facebook.com/"
+                    <a href="https://www.facebook.com/saravanaaguru.saravanaaguru"
                       ><span
                         ><i
                           class="fa fa-facebook-official"
                           aria-hidden="true"
                         ></i></span
                     ></a>
-                    <a href="https://www.instagram.com/"
+                    <a href="https://www.instagram.com/saravanaaguru/"
                       ><span
                         ><i
                           class="fa fa-instagram"
                           aria-hidden="true"
                         ></i></span
                     ></a>
-                    <a href="https://www.twitter.com/"
+                    <a href="https://twitter.com/raverong"
                       ><span
                         ><i class="fa fa-twitter" aria-hidden="true"></i></span
                     ></a>
@@ -177,21 +179,21 @@
                   <h5>Piravindraj</h5>
                   <p>Front End Developer</p>
                   <div class="social-links88">
-                    <a href="https://www.facebook.com/"
+                    <a href="https://www.facebook.com/REALiFrankenCop"
                       ><span
                         ><i
                           class="fa fa-facebook-official"
                           aria-hidden="true"
                         ></i></span
                     ></a>
-                    <a href="https://www.instagram.com/"
+                    <a href="https://www.instagram.com/piravind_22/"
                       ><span
                         ><i
                           class="fa fa-instagram"
                           aria-hidden="true"
                         ></i></span
                     ></a>
-                    <a href="https://www.twitter.com/"
+                    <a href="https://twitter.com/iFrankenCop"
                       ><span
                         ><i class="fa fa-twitter" aria-hidden="true"></i></span
                     ></a>
@@ -206,14 +208,14 @@
                   <h5>Leong Min Yi</h5>
                   <p>Back End Developer</p>
                   <div class="social-links88">
-                    <a href="https://www.facebook.com/"
+                    <a href="https://www.facebook.com/myleong42442424242424242424242"
                       ><span
                         ><i
                           class="fa fa-facebook-official"
                           aria-hidden="true"
                         ></i></span
                     ></a>
-                    <a href="https://www.instagram.com/"
+                    <a href="https://www.instagram.com/myleong424424/"
                       ><span
                         ><i
                           class="fa fa-instagram"
@@ -242,7 +244,7 @@
                           aria-hidden="true"
                         ></i></span
                     ></a>
-                    <a href="https://www.instagram.com/"
+                    <a href="https://www.instagram.com/javelineou/"
                       ><span
                         ><i
                           class="fa fa-instagram"
