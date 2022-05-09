@@ -270,7 +270,7 @@ body {
 	text-align: center;
 }
 
-li {
+#countdown li {
 	display: inline-block;
 	font-size: 1.5em;
 	list-style-type: none;
@@ -278,17 +278,17 @@ li {
 	text-transform: uppercase;
 }
 
-li span{
+#countdown li span{
 	display: block;
 	font-size: 4.5rem;
 }
 
 @media all and (max- width: 768px){
-	li{
+	#countdown li{
 		font-size: calc(1.125rem * var(--smaller));
 	}
 	
-	li span{
+	#countdown li span{
 		font-size: calc(3.375rem * var(--smaller));
 	}
 }
