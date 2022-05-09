@@ -15,7 +15,8 @@
 <html lang="en">
 	
 	<head>
-		
+	
+		<title>Student registration </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- Bootstrap CSS -->
@@ -36,7 +37,6 @@
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="../registration.css" >
-		<title> Student Registration </title>   
 	</head>
    
 <!--Navigation bar-->
