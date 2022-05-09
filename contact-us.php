@@ -1,15 +1,6 @@
 <?php
-  // Include config file to start db
   include ("config.php");
   session_start();
-
-  if(count($_POST)>0){
-    if(empty($_POST['g-recaptcha-response'])){
-      echo '<script language="javascript">';
-      echo 'alert("Please solve reCaptcha!")';
-      echo '</script>';
-    }
-  }
 ?>
 
 <script>
@@ -195,7 +186,7 @@
         <div
           class="g-recaptcha"
           data-sitekey="6LfuT50fAAAAAPkUxAYUgDIV_SXZo5AQEmNkPwDL">
-		</div>
+		    </div>
         <input class="btn btn-primary shadow-sm my-4" type="submit" name="submit" onClick="confirmation();" value="Submit">
         
         </form>
@@ -244,26 +235,37 @@
 </html>
 
 <?php
-//Get ID from Database
-if(isset($_POST['submit']))
-{
-  $name       = $_POST['Name'];
-	$email      = $_POST['Email'];
-	$message  = $_POST['Message'];
+
+if(isset($_POST['submit'])){
+  if(empty($_POST['g-recaptcha-response'])){
+    ?>
+    <script type="text/javascript">
+    alert("Please solve the captcha!");
+    window.location.href = "contact-us.php";
+    </script>
+    <?php
+  }
+  else {
+    $name       = $_POST['Name'];
+    $email      = $_POST['Email'];
+    $message  = $_POST['Message'];
+      
     
-	
-		$sql="INSERT INTO contact(name, email, message) VALUE ('$name', '$email', '$message')";
-        
-		if (mysqli_query($conn, $sql)) 
-        {
-          echo "Record updated successfully". $sql;
-          //go to thank you page
-          echo ("<script LANGUAGE='JavaScript'>window.location.href='thankyou.php';</script>");
-		} 
-        else 
-        { 
-          echo "<script>alert('Failed to send message.')</script>"; 
-        }
-	
+      $sql="INSERT INTO contact(name, email, message) VALUE ('$name', '$email', '$message')";
+          
+      if (mysqli_query($conn, $sql)) 
+          {
+            echo "Record updated successfully". $sql;
+            //go to thank you page
+            echo ("<script LANGUAGE='JavaScript'>window.location.href='thankyou.php';</script>");
+      } 
+          else 
+          { 
+            echo "<script>alert('Failed to send message.')</script>"; 
+          }
+    
+  }
+
 }
+
 ?>
