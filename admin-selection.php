@@ -121,6 +121,21 @@ if($_SESSION["loggedin"] == true && $_SESSION["admin_status"] != '1'){
         </button></a
       >
     </div>
+	<div class="container11">
+	  <a href="Admin/candidates.php">
+      <button class="btn-3">
+        <i class="bi bi-person-plus"></i> <br />
+        <br />Candidates <br />
+        Record
+      </button>
+	  </a>
+      <a href="Admin/report-display.php"
+        ><button class="btn-3">
+          <i class="bi bi-archive"></i> <br /><br />Student <br />
+          Report
+        </button></a
+      >
+    </div>
   </body>
 
   <!-- Footer -->
