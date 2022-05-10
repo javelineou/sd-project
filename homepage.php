@@ -1,4 +1,6 @@
 <?php 
+
+
 session_start();
  
 // Check if the user is already logged in as admin, then go to admin homepage
@@ -11,6 +13,16 @@ else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true && $_SESSI
   header("location: logged-homepage.php");
   exit;
 }
+
+
+//retrieve data
+
+
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
