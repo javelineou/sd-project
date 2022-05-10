@@ -333,7 +333,7 @@ function showSlides(n){
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yy = today.getFullYear(),
       nextYear = yy + 1,
-      dayMonth = "05/12/",
+      dayMonth = "05/10/",
       winner = dayMonth + yy;
   
   today = mm + "/" + dd + "/" + yy;

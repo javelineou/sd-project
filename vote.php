@@ -139,7 +139,7 @@
 				<div class = "container">
 					<h2>Davinia</h2>
 					<p class= "title text-center">ARTS & DESIGN - YEAR 2</p>
-					<p class= "text-center" > "Your Education, Your Life, Your School, Our Time Is Now. Vote for Edward Santos, your voice!"</p>
+					<p class= "text-center" > "Your Education, Your Life, Your School, Our Time Is Now. Vote for Davinia, your voice!"</p>
 					 <div class="d-grid gap-2">
 						<input type="submit" value="Vote" class="btn btn-primary" name="candidate_A">
 					 </div>
@@ -154,7 +154,7 @@
 				<div class = "container">
 					<h2>Ho Wei Zheng</h2>
 					<p class= "title text-center">BCSIS - YEAR 1</p>
-					<p class= "text-center" > "You’ve seen the best now choose the best, vote for me, Melissa Carlos."</p>
+					<p class= "text-center" > "You’ve seen the best now choose the best, vote for me, Ho Wei Zheng."</p>
 					<div class="d-grid gap-2">
 						<input type="submit" value="Vote" class="btn btn-primary" name="candidate_B">
 					</div>
@@ -169,7 +169,7 @@
 				<div class = "container">
 					<h2>Amirul</h2>
 					<p class= "title text-center" >BITNS - YEAR 3</p>
-					<p class= "text-center" >  "Vote 4 Alyssa. I promise I’ll do my best I’ll never stop to take a rest."</p>
+					<p class= "text-center" >  "Vote 4 Amirul. I promise I’ll do my best I’ll never stop to take a rest."</p>
 					<div class="d-grid gap-2">
 					  <input type="submit" value="Vote" class="btn btn-primary" name="candidate_C">
 					</div>
