@@ -248,16 +248,16 @@ if(isset($_POST['submit'])){
   else {
     $name       = $_POST['Name'];
     $email      = $_POST['Email'];
-    $message  = $_POST['Message'];
+    $message  	= $_POST['Message'];
       
     
       $sql="INSERT INTO contact(name, email, message) VALUE ('$name', '$email', '$message')";
           
       if (mysqli_query($conn, $sql)) 
           {
-            echo "Record updated successfully". $sql;
+            echo "enquiry submission successful". $sql;
             //go to thank you page
-            echo ("<script LANGUAGE='JavaScript'>window.location.href='thankyou.php';</script>");
+            echo ("<script LANGUAGE='JavaScript'>window.location.href='contact-us.php';</script>");
       } 
           else 
           { 
